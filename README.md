@@ -3,7 +3,7 @@ Laboratoire Azure, ASP.NET Core, Entity Framework Core et Azure DevOps
 
 ## Etape 1 : Déployer une Web App sur Azure
 
-## Etape 2 : Ajouter Entity Framewor Core
+## Etape 2 : Ajouter Entity Framework Core
 
 ## Etape 3 : Utiliser Azure SQL Database
 
