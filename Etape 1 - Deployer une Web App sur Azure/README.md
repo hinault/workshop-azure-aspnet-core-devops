@@ -36,6 +36,37 @@ Créez une application web ASP.NET Core en effectuant les étapes suivantes :
 
 ## <a name="publish-y"></a>Modifier l'application Web
 
+Dans le dossier Models, ajoutez une nouvelle classe Commentaire.cs, avec le code suivant :
+
+```cs
+using System;
+
+
+namespace WebApp.Models
+{
+    public class Commentaire
+    {
+        public int Id { get; set; }
+
+        public string Nom { get; set; }
+
+        public string Email { get; set; }
+
+        public DateTime DateCommentaire { get; set; }
+    }
+}
+
+```
+
+
+```cs
+
+```
+
+```cs
+
+```
+
 ## <a name="publish-your-web-app"></a>Publier votre application
 
 1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **myFirstAzureWebApp**, puis sélectionnez **Publier**.
