@@ -94,6 +94,15 @@ namespace WebApp.Controllers
         }
     }
 }
+
+### La vue
+
+Faites un clic droit sur le nom de la méthode Index() du contrôleur CommentairesController. 
+
+Sélectionner Ajouter une Vue 
+
+
+![Ajout controleur](./media/scalflod-view.PNG)
 ```
 
 ```cs
