@@ -36,6 +36,9 @@ Créez une application web ASP.NET Core en effectuant les étapes suivantes :
 
 ## <a name="publish-y"></a>Modifier l'application Web
 
+
+### Le modèle
+
 Dans le dossier Models, ajoutez une nouvelle classe Commentaire.cs, avec le code suivant :
 
 ```cs
@@ -57,10 +60,40 @@ namespace WebApp.Models
 }
 
 ```
+### Le contrôleur
 
+Faites un clic droit sur le dossier Controllers. Selectionnez 'Ajouter -> Contrôleur'.
+
+Dans la fenêtre qui va s'afficher, selectionnez 'Contrôleur MVC - Vide'.
+
+![Ajout controleur](./media/add-controller.PNG)
+
+Dans la fenêtre suivante, donnez le nom 'CommentairesController'.
+
+Remplacez le code dans ce fichier par ce qui suit :
 
 ```cs
+using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using WebApp.Models;
 
+namespace WebApp.Controllers
+{
+    public class CommentairesController : Controller
+    {
+        public IActionResult Index()
+        {
+            var commentaires = new List<Commentaire>()
+            {
+                new Commentaire(){Id=1,Nom="Thomas", Email="thomas@test.com", Texte="Belle initiative", DateCommentaire=DateTime.Now},
+                new Commentaire(){Id=1,Nom="Daniel", Email="daniel@test.com", Texte="Intéressant pour découvrir Azure", DateCommentaire=DateTime.Now}
+            };
+
+            return View(commentaires);
+        }
+    }
+}
 ```
 
 ```cs

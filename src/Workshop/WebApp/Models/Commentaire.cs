@@ -11,6 +11,8 @@ namespace WebApp.Models
 
         public string Email { get; set; }
 
+        public string Texte { get; set; }
+
         public DateTime DateCommentaire { get; set; }
     }
 }
