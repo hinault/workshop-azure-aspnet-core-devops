@@ -101,8 +101,18 @@ Faites un clic droit sur le nom de la méthode Index() du contrôleur Commentaires
 
 Sélectionner Ajouter une Vue 
 
-
 ![Ajout controleur](./media/scalflod-view.PNG)
+
+La fenêtre d'ajout de la vue va s'afficher.
+
+Dans le champ Modèle, déroulez et sélectionnez 'List'.
+
+Dans le champ Classe de  modèle, déroulez et sélectionnez 'Commentaire'.
+
+Cliquez sur ajouter.
+
+![Ajout controleur](./media/add-view.PNG)
+
 ```
 
 ```cs
