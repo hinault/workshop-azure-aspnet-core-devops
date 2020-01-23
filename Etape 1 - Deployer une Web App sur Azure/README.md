@@ -94,6 +94,7 @@ namespace WebApp.Controllers
         }
     }
 }
+```
 
 ### La vue
 
@@ -113,13 +114,33 @@ Cliquez sur ajouter.
 
 ![Ajout controleur](./media/add-view.PNG)
 
-```
+Un fichier Index.cshtml sera ajouté dans le dossier 'Views/Commentaires'.
+
+### Le layout
+
+Ouvrez le fichier /Views/Shared/_Layout.cshtml.
+
+Après les lignes de code :
 
 ```cs
-
+<li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Accueil</a>
+                        </li>
 ```
 
-## <a name="publish-your-web-app"></a>Publier votre application
+Ajoutez le code suivant 
+
+```cs
+<li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Commentaires" asp-action="Index">Commentaires</a>
+                        </li>
+```
+
+### Exécuter l'application
+
+Appuyez F5 pour exécuter l'application.
+
+## <a name="publish-your-web-app"></a>Déployer sur Azure
 
 1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **myFirstAzureWebApp**, puis sélectionnez **Publier**.
 
