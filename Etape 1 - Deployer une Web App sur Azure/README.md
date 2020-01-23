@@ -6,7 +6,7 @@
 dans le langage de programmation de votre choix sans gérer l’infrastructure. Il offre une mise à l’échelle automatique et une haute disponibilité, 
 prend en charge à la fois Windows et Linux et permet des déploiements automatisés à partir de GitHub, Azure DevOps ou n’importe quel référentiel Git.
 
-##<a name="goal"> Objectif
+##<a name="goal"></a> Objectif
 
 Pour cette première partie du laboratoire, les participants vont créer une application Web ASP.NET Core dans Visual Studio. Ils vont ajouter un formulaire pour collecter les commentaires
 des utilisateurs. L'application sera ensuite déployée sur Azure App Service.
@@ -28,23 +28,15 @@ Créez une application web ASP.NET Core en effectuant les étapes suivantes :
 
  ![Ouverture projet](./media/open-project.PNG)
 
-1. Dans **Créer un projet**, recherchez et choisissez **Application web ASP.NET Core** pour C#, puis sélectionnez **Suivant**.
+1. Ouvrez la solution de l'étape 1 (\Etape 1 - Deployer une Web App sur Azure\Workshop\Workshop.sln).
 
-1. Dans **Configurer votre nouveau projet**, nommez l’application _myFirstAzureWebApp_, puis sélectionnez **Créer**.
+1. Dans le menu Visual Studio, sélectionnez **Déboguer** > **Démarrer le débogage** pour exécuter l’application web localement.
 
-   ![Configurer votre projet d’application web](./media/app-service-web-get-started-dotnet/configure-web-app-project.png)
+![Exécuter l’application localement](./media/debug-locally.PNG)
 
-1. Pour ce guide de démarrage rapide, choisissez le modèle **Application web**. Vérifiez que l’option d’authentification a la valeur **Aucune authentification** et qu’aucune autre option n’est sélectionnée. Sélectionnez **Create** (Créer).
+## <a name="publish-y"></a>Modifier l'application Web
 
-   ![Sélectionner ASP.NET Core Razor Pages pour ce tutoriel](./media/app-service-web-get-started-dotnet/aspnet-razor-pages-app.png)
-
-    Vous pouvez déployer n’importe quel type d’application web ASP.NET Core dans Azure.
-
-1. Dans le menu Visual Studio, sélectionnez **Déboguer** > **Démarrer sans débogage** pour exécuter l’application web localement.
-
-   ![Exécuter l’application localement](./media/app-service-web-get-started-dotnet/razor-web-app-running-locally.png)
-
-## <a name="publish-your-web-app"></a>Publier votre application web
+## <a name="publish-your-web-app"></a>Publier votre application
 
 1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **myFirstAzureWebApp**, puis sélectionnez **Publier**.
 
