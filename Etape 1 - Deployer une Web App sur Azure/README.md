@@ -1,8 +1,5 @@
----
-title: 'Démarrage rapide : Créer une application C# ASP.NET Core'
-description: Découvrez comment exécuter des applications web dans Azure App Service en déployant le modèle d’application web C# ASP.NET Core par défaut à partir de Visual Studio.
----
-# <a name="create-an-aspnet-core-web-app-in-azure"></a>Créer une application web ASP.NET Core dans Azure
+
+# <a name="create-an-aspnet-core-web-app-in-azure"></a>Créer et déployer une application web ASP.NET Core dans Azure Web Apps
 
 > [!NOTE]
 > Cet article explique comment déployer une application sur App Service sous Windows. Pour déployer une application App Service sur _Linux_, consultez [Créer et déployer une application web .NET Core sur App Service sur Linux](./containers/quickstart-dotnetcore.md).
