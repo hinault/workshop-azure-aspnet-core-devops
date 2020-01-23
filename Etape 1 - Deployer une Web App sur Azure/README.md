@@ -2,26 +2,31 @@
 # <a name="create-an-aspnet-core-web-app-in-azure"></a>Créer et déployer une application web ASP.NET Core dans Azure Web Apps
 
 
-[Azure App Service](https://docs.microsoft.com/fr-ca/azure/app-service/) offre un service d’hébergement web hautement évolutif appliquant des mises à jour correctives automatiques.
+[Azure App Service](https://docs.microsoft.com/fr-ca/azure/app-service/) vous permet de créer et d’héberger des applications web, des back-ends mobiles et des API RESTful 
+dans le langage de programmation de votre choix sans gérer l’infrastructure. Il offre une mise à l’échelle automatique et une haute disponibilité, 
+prend en charge à la fois Windows et Linux et permet des déploiements automatisés à partir de GitHub, Azure DevOps ou n’importe quel référentiel Git.
 
-Ce guide de démarrage rapide montre comment déployer votre première application web ASP.NET Core sur Azure App Service. Quand vous aurez terminé, vous disposerez d’un groupe de ressources constitué d’un plan App Service et d’une application App Service avec une application web déployée.
+##<a name="goal"> Objectif
 
-[!INCLUDE [quickstarts-free-trial-note](../../includes/quickstarts-free-trial-note.md)]
+Pour cette première partie du laboratoire, les participants vont créer une application Web ASP.NET Core dans Visual Studio. Ils vont ajouter un formulaire pour collecter les commentaires
+des utilisateurs. L'application sera ensuite déployée sur Azure App Service.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Pour effectuer ce tutoriel, installez <a href="https://www.visualstudio.com/downloads/" target="_blank">Visual Studio 2019</a> avec la charge de travail **Développement web et ASP.NET**.
+Pour effectuer ce laboratoire, vous devez installer <a href="https://www.visualstudio.com/downloads/" target="_blank">Visual Studio 2019</a> avec la charge de travail **Développement web et ASP.NET**.
 
 Si vous avez déjà installé Visual Studio 2019 :
 
 - Installez les dernières mises à jour dans Visual Studio en sélectionnant **Aide** > **Rechercher les mises à jour**.
 - Ajoutez la charge de travail en sélectionnant **Outils** > **Obtenir des outils et des fonctionnalités**.
 
-## <a name="create-an-aspnet-core-web-app"></a>Créez une application web ASP.NET Core
+## <a name="open-website"></a> Ouvrir le projet de demarrage
 
 Créez une application web ASP.NET Core en effectuant les étapes suivantes :
 
-1. Ouvrez Visual Studio, puis sélectionnez **Créer un projet**.
+1. Ouvrez Visual Studio, puis sélectionnez **Ouvrir un projet ou une solution**.
+
+ ![Ouverture projet](./media/open-project.PNG)
 
 1. Dans **Créer un projet**, recherchez et choisissez **Application web ASP.NET Core** pour C#, puis sélectionnez **Suivant**.
 
