@@ -142,19 +142,23 @@ Appuyez F5 pour exécuter l'application.
 
 ## <a name="publish-your-web-app"></a>Déployer sur Azure
 
-1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **myFirstAzureWebApp**, puis sélectionnez **Publier**.
+Le moyen le plus simple de déployer votre application est d'utiliser la fonction Web Deploy de Visual Studio.
 
-1. Choisissez **App Service**, puis sélectionnez **Publier**.
+Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **WebApp**, puis sélectionnez **Publier**.
 
-   ![Publier à partir de la page de présentation du projet](./media/app-service-web-get-started-dotnet/publish-app-vs2019.png)
+1. Choisissez **App Service**, puis cliquez sur **Créer un profil**.
 
-1. Dans **Créer un App Service**, vos options varient si vous êtes déjà connecté à Azure et si vous avez un compte Visual Studio lié à un compte Azure. Sélectionnez **Ajouter un compte** ou **Connexion** pour vous connecter à votre abonnement Azure. Si vous êtes déjà connecté, sélectionnez le compte souhaité.
+   ![Publier à partir de la page de présentation du projet](./media/publish-app-vs2019.PNG)
+
+ Dans **Créer un App Service**, vos options varient si vous êtes déjà connecté à Azure et si vous avez un compte Visual Studio lié à un compte Azure. 
+ 
+ Sélectionnez **Ajouter un compte** ou **Connexion** pour vous connecter à votre abonnement Azure. Si vous êtes déjà connecté, sélectionnez le compte souhaité.
 
    > [!NOTE]
    > Si vous êtes déjà connecté, ne sélectionnez pas encore **Créer**.
    >
 
-   ![Connexion à Azure](./media/app-service-web-get-started-dotnet/sign-in-azure-vs2019.png)
+   ![Connexion à Azure](./media/sign-in-azure-vs2019.PNG)
 
    [!INCLUDE [resource group intro text](../../includes/resource-group.md)]
 
@@ -174,17 +178,17 @@ Appuyez F5 pour exécuter l'application.
    | Location | Europe Ouest | Centre de données dans lequel l’application web est hébergée. |
    | Size | Gratuit | Le [niveau tarifaire](https://azure.microsoft.com/pricing/details/app-service/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio) détermine les fonctionnalités d’hébergement. |
 
-   ![Créer un plan App Service](./media/app-service-web-get-started-dotnet/app-service-plan-vs2019.png)
+   ![Créer un plan App Service](./media/app-service-plan-vs2019.PNG)
 
 1. Dans **Nom**, entrez un nom d’application unique qui inclut uniquement les caractères valides `a-z`, `A-Z`, `0-9` et `-`. Vous pouvez accepter le nom unique généré automatiquement. L’URL de l’application web est `http://<app_name>.azurewebsites.net`, où `<app_name>` est le nom de votre application.
 
-   ![Configurer le nom de l’application](./media/app-service-web-get-started-dotnet/web-app-name-vs2019.png)
+   ![Configurer le nom de l’application](./media/web-app-name-vs2019.PNG)
 
 1. Sélectionnez **Créer** pour commencer à créer les ressources Azure.
 
 Une fois que l’Assistant a terminé, il publie l’application web ASP.NET Core sur Azure, puis il lance l’application dans le navigateur par défaut.
 
-![Application web ASP.NET publiée dans Azure](./media/app-service-web-get-started-dotnet/web-app-running-live.png)
+![Application web ASP.NET publiée dans Azure](./media/web-app-running-live.PNG)
 
 Le nom d’application spécifié dans la page **Créer un App Service** est utilisé en tant que préfixe d’URL au format `http://<app_name>.azurewebsites.net`.
 
