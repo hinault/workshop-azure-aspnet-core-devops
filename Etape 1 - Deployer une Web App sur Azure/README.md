@@ -184,7 +184,7 @@ Dans **Créer un App Service**, vos options varient si vous êtes déjà connecté à 
 
 Une fois les ressources Azure créées, une page récapitulative va s'afficher.
 
- ![Configurer le nom de l’application](./media/publis-webapp.PNG)
+ ![Configurer le nom de l’application](./media/publis-webapp.png)
 
 10. Dans la page récapitulative intitulée **Publier**, sélectionnez **Publier**.
 
