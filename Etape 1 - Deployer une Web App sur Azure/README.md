@@ -197,30 +197,26 @@ Le nom d’application spécifié dans la page **Créer un App Service** est utilisé 
 
 **Félicitations !** Votre application web ASP.NET Core s’exécute en temps réel dans Azure App Service.
 
-
-
-
-
 ## <a name="manage-the-azure-app"></a>Gérer l’application Azure
 
-Pour gérer l’application web, accédez au [Portail Azure](https://portal.azure.com), puis recherchez et sélectionnez **App Services**.
+Pour gérer l’application web, accédez au [Portail Azure](https://portal.azure.com), puis cliquez sur **Groupes de ressources**
 
-![Sélectionner App Services](./media/app-service-web-get-started-dotnet/app-services.png)
+![Groupes de ressources](./media/ressource-group.png)
 
-Dans la page **App Services**, sélectionnez le nom de votre application web.
+Dans la page **Groupes de ressources**, sélectionnez le groupe de ressources **CEMLabRG**.
 
-![Navigation au sein du portail pour accéder à l’application Azure](./media/app-service-web-get-started-dotnet/access-portal-vs2019.png)
+Vous aurez deux ressources dans ce groupe, soit : le **Plan App Service** et **l'App Service**. 
 
-Vous voyez apparaître la page Vue d’ensemble de votre application web. Ici, vous pouvez effectuer des tâches de gestion de base, par exemple parcourir, arrêter, démarrer, redémarrer et supprimer.
+Sélectionnez **L'App Service**.
 
-![App Service dans le portail Azure](./media/app-service-web-get-started-dotnet/web-app-general-vs2019.png)
+
+![Sélectionner App Services](./media/app-services.png)
+
+
+Vous verrez la page Vue d’ensemble de votre application web. Ici, vous pouvez effectuer des tâches de gestion de base, par exemple parcourir, arrêter, démarrer, redémarrer et supprimer.
+
+![App Service dans le portail Azure](./media/web-app-general-vs2019.PNG)
 
 Le menu de gauche fournit différentes pages vous permettant de configurer votre application.
 
-[!INCLUDE [Clean-up section](../../includes/clean-up-section-portal.md)]
-
-## <a name="next-steps"></a>Étapes suivantes
-
-> [!div class="nextstepaction"]
-> [Build a .NET Core and SQL Database web app in Azure App Service](app-service-web-tutorial-dotnetcore-sqldb.md) (Créer une application web .NET Core et SQL Database dans Azure App Service)
-
+##FIN
