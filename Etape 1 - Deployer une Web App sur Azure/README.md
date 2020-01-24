@@ -144,78 +144,62 @@ Appuyez F5 pour exécuter l'application.
 
 Le moyen le plus simple de déployer votre application est d'utiliser la fonction Web Deploy de Visual Studio.
 
-Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **WebApp**, puis sélectionnez **Publier**.
+1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **WebApp**, puis sélectionnez **Publier**.
 
-1. Choisissez **App Service**, puis cliquez sur **Créer un profil**.
+2. Choisissez **App Service**, puis cliquez sur **Créer un profil**.
 
    ![Publier à partir de la page de présentation du projet](./media/publish-app-vs2019.PNG)
 
- Dans **Créer un App Service**, vos options varient si vous êtes déjà connecté à Azure et si vous avez un compte Visual Studio lié à un compte Azure. 
+Dans **Créer un App Service**, vos options varient si vous êtes déjà connecté à Azure et si vous avez un compte Visual Studio lié à un compte Azure. 
  
- Sélectionnez **Ajouter un compte** ou **Connexion** pour vous connecter à votre abonnement Azure. Si vous êtes déjà connecté, sélectionnez le compte souhaité.
-
-   > [!NOTE]
-   > Si vous êtes déjà connecté, ne sélectionnez pas encore **Créer**.
-   >
+3. Sélectionnez **Ajouter un compte** ou **Connexion** pour vous connecter à votre abonnement Azure. Si vous êtes déjà connecté, sélectionnez le compte souhaité.
 
    ![Connexion à Azure](./media/sign-in-azure-vs2019.PNG)
 
-   [!INCLUDE [resource group intro text](../../includes/resource-group.md)]
+<a herf="https://docs.microsoft.com/fr-ca/azure/azure-resource-manager/management/overview#terminology">Un groupe de ressources</a> est un conteneur logique dans lequel les ressources Azure comme les applications web, les bases de données et les comptes de stockage sont déployés et gérés. Par exemple, vous pouvez choisir de supprimer le groupe de ressources complet ultérieurement en une seule étape.
 
-1. Pour **Groupe de ressources**, sélectionnez **Nouveau**.
+4. Pour **Groupe de ressources**, sélectionnez **Nouveau**.
 
-1. Dans **Nouveau nom du groupe de ressources**, entrez *myResourceGroup*, puis sélectionnez **OK**.
+5. Dans **Nouveau nom du groupe de ressources**, entrez *CEMLabRG*, puis sélectionnez **OK**.
 
-   [!INCLUDE [app-service-plan](../../includes/app-service-plan.md)]
+<a href="https://docs.microsoft.com/fr-ca/azure/app-service/overview-hosting-plans">Un plan App Service</a> spécifie l’emplacement, la taille et les fonctionnalités de la batterie de serveurs web qui héberge votre application
 
-1. Pour le **Plan d’hébergement**, sélectionnez **Nouveau**.
+6. Pour le **Plan d’hébergement**, sélectionnez **Nouveau**.
 
-1. Dans la boîte de dialogue **Configurer le plan d’hébergement**, entrez les valeurs du tableau suivant, puis sélectionnez **OK**.
+7. Dans la boîte de dialogue **Configurer le plan d’hébergement**, entrez les valeurs du tableau suivant, puis sélectionnez **OK**.
 
    | Paramètre | Valeur suggérée | Description |
    |-|-|-|
-   |Plan App Service| myAppServicePlan | Nom du plan App Service. |
-   | Location | Europe Ouest | Centre de données dans lequel l’application web est hébergée. |
+   |Plan App Service| MonPremierWebAppPlan | Nom du plan App Service. |
+   | Location | Canada East | Centre de données dans lequel l’application web est hébergée. |
    | Size | Gratuit | Le [niveau tarifaire](https://azure.microsoft.com/pricing/details/app-service/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio) détermine les fonctionnalités d’hébergement. |
 
    ![Créer un plan App Service](./media/app-service-plan-vs2019.PNG)
 
-1. Dans **Nom**, entrez un nom d’application unique qui inclut uniquement les caractères valides `a-z`, `A-Z`, `0-9` et `-`. Vous pouvez accepter le nom unique généré automatiquement. L’URL de l’application web est `http://<app_name>.azurewebsites.net`, où `<app_name>` est le nom de votre application.
+8. Dans **Nom**, entrez un nom d’application unique qui inclut uniquement les caractères valides `a-z`, `A-Z`, `0-9` et `-`. Vous pouvez accepter le nom unique généré automatiquement. L’URL de l’application web est `http://<app_name>.azurewebsites.net`, où `<app_name>` est le nom de votre application.
 
    ![Configurer le nom de l’application](./media/web-app-name-vs2019.PNG)
 
-1. Sélectionnez **Créer** pour commencer à créer les ressources Azure.
+9. Sélectionnez **Créer** pour commencer à créer les ressources Azure.
 
-Une fois que l’Assistant a terminé, il publie l’application web ASP.NET Core sur Azure, puis il lance l’application dans le navigateur par défaut.
+Une fois les ressources Azure créées, une page récapitulative va s'afficher.
+
+ ![Configurer le nom de l’application](./media/publis-webapp.PNG)
+
+10. Dans la page récapitulative intitulée **Publier**, sélectionnez **Publier**.
+
+Une fois la publication terminée, Visual Studio lance le navigateur avec votre application en cours d'exécution.
 
 ![Application web ASP.NET publiée dans Azure](./media/web-app-running-live.PNG)
 
 Le nom d’application spécifié dans la page **Créer un App Service** est utilisé en tant que préfixe d’URL au format `http://<app_name>.azurewebsites.net`.
 
+
 **Félicitations !** Votre application web ASP.NET Core s’exécute en temps réel dans Azure App Service.
 
-## <a name="update-the-app-and-redeploy"></a>Mise à jour de l’application et redéploiement
 
-1. Dans l’**Explorateur de solutions**, sous votre projet, ouvrez **Pages** > **Index.cshtml**.
 
-1. Remplacez les deux balises `<div>` par le code suivant :
 
-   ```HTML
-   <div class="jumbotron">
-       <h1>ASP.NET in Azure!</h1>
-       <p class="lead">This is a simple app that we’ve built that demonstrates how to deploy a .NET app to Azure App Service.</p>
-   </div>
-   ```
-
-1. Pour effectuer un redéploiement dans Azure, cliquez avec le bouton droit sur le projet **myFirstAzureWebApp** dans **l’Explorateur de solutions**, puis sélectionnez **Publier**.
-
-1. Dans la page récapitulative intitulée **Publier**, sélectionnez **Publier**.
-
-   ![Page récapitulative de Visual Studio pour la publication](./media/app-service-web-get-started-dotnet/publish-summary-page-vs2019.png)
-
-Une fois la publication terminée, Visual Studio lance un navigateur en accédant à l’URL de l’application web.
-
-![Application web ASP.NET mise à jour dans Azure](./media/app-service-web-get-started-dotnet/web-app-running-live-updated.png)
 
 ## <a name="manage-the-azure-app"></a>Gérer l’application Azure
 
