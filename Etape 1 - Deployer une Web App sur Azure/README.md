@@ -28,9 +28,9 @@ Créez une application web ASP.NET Core en effectuant les étapes suivantes :
 
  ![Ouverture projet](./media/open-project.PNG)
 
-1. Ouvrez la solution de l'étape 1 (\Etape 1 - Deployer une Web App sur Azure\Workshop\Workshop.sln).
+2. Ouvrez la solution de l'étape 1 (\Etape 1 - Deployer une Web App sur Azure\Workshop\Workshop.sln).
 
-1. Dans le menu Visual Studio, sélectionnez **Déboguer** > **Démarrer le débogage** pour exécuter l’application web localement.
+3. Dans le menu Visual Studio, sélectionnez **Déboguer** > **Démarrer le débogage** pour exécuter l’application web localement.
 
 ![Exécuter l’application localement](./media/debug-locally.PNG)
 
@@ -39,7 +39,7 @@ Créez une application web ASP.NET Core en effectuant les étapes suivantes :
 
 ### Le modèle
 
-Dans le dossier Models, ajoutez une nouvelle classe Commentaire.cs, avec le code suivant :
+Dans le dossier **Models**, ajoutez une nouvelle classe **Commentaire.cs**, avec le code suivant :
 
 ```cs
 using System;
@@ -62,15 +62,15 @@ namespace WebApp.Models
 ```
 ### Le contrôleur
 
-Faites un clic droit sur le dossier Controllers. Selectionnez 'Ajouter -> Contrôleur'.
+1. Faites un clic droit sur le dossier Controllers. Selectionnez **Ajouter -> Contrôleur**.
 
-Dans la fenêtre qui va s'afficher, selectionnez 'Contrôleur MVC - Vide'.
+2. Dans la fenêtre qui va s'afficher, selectionnez **Contrôleur MVC - Vide**.
 
 ![Ajout controleur](./media/add-controller.PNG)
 
-Dans la fenêtre suivante, donnez le nom 'CommentairesController'.
+3. Dans la fenêtre suivante, donnez le nom **CommentairesController**.
 
-Remplacez le code dans ce fichier par ce qui suit :
+4. Remplacez le code dans ce fichier par ce qui suit :
 
 ```cs
 using System;
@@ -98,11 +98,11 @@ namespace WebApp.Controllers
 
 ### La vue
 
-Faites un clic droit sur le nom de la méthode Index() du contrôleur CommentairesController. 
+1. Faites un clic droit sur le nom de la méthode **Index()** du contrôleur **CommentairesController**. 
 
-Sélectionner Ajouter une Vue 
+1. Sélectionner Ajouter une Vue 
 
-![Ajout controleur](./media/scalflod-view.PNG)
+![Ajout controleur](./media/scalflod-view.png)
 
 La fenêtre d'ajout de la vue va s'afficher.
 
