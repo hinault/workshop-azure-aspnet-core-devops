@@ -21,6 +21,76 @@ en utilisant Entity Framework Core.
 
 4. Supprimer le dossier **Commentaires** dans le dossier **Views**
 
-# <a name=""></a>
+# <a name="validation"></a> Validation avec les DataAnnotations
+
+Les DataAnnotations sont utilisés pour personnaliser le modèle de données en utilisant des attributs qui spécifient des règles de mise en forme, de validation et de mappage de base de données.
+
+```cs
+using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace WebApp.Models
+{
+    public class Commentaire
+    {
+        public int Id { get; set; }
+
+        public string Nom { get; set; }
+
+        [Required]
+        [Display(Name = "Adresse Mail")]
+        public string Email { get; set; }
+
+        [Required]
+        [Display(Name = "Commemtaire")]
+        public string Texte { get; set; }
+
+        [Required]
+        [Display(Name = "Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public DateTime DateCommentaire { get; set; }
+    }
+}
+
+
+```
+
+L'attribut **Required** rend le champ obligatoire. 
+
+L'attribut **Display** permet de définir le nom d'affichage.
+
+L'attribut ****
+
 
 # <a name=""></a>
+
+
+```cs
+
+
+```
+
+
+```cs
+
+
+```
+
+
+```cs
+
+
+```
+
+
+```cs
+
+
+```
+
+
+```cs
+
+
+```
