@@ -163,15 +163,11 @@ Le code complet de cette méthode est le suivant :
         }
 
 ```
+Vous devez ajoutez ces références. Copiez et collez les lignes ci-dessus dans la section **Using** du fichier Startup.cs :
 
 ```cs
-
-
-```
-
-```cs
-
-
+using Microsoft.Extensions.Hosting;
+using WebApp.Data;
 ```
 
 
