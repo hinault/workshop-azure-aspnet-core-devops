@@ -177,6 +177,12 @@ Nous sommes pret! Nous pouvons desormais accéder à notre base de données à parti
 pas encore créer notre base de données avec les tables correspondantes. Nous n'avoons pas besoin de le faire manuèllement. Nous pouvons utiliser 
 la fonctionnalité de migration des outils Entity Framework Core pour générer et mettre à jour base de données.
 
+Accedez à la **Console du gestionnaire de package** et saisiez la commande **Add-Migration InitialMigration**.
+
+Le dossier **Migrations** sera créé à la racine de votre projet  :
+
+ ![Console NuGet](./media/migration.PNG)
+
 ```cs
 
 
