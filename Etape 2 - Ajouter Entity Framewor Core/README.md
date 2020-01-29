@@ -25,6 +25,8 @@ en utilisant Entity Framework Core.
 
 Les DataAnnotations sont utilisés pour personnaliser le modèle de données en utilisant des attributs qui spécifient des règles de mise en forme, de validation et de mappage de base de données.
 
+Remplacez le contenu du fichier **Models\Commentaire.cs** par le code qui suit : 
+
 ```cs
 using System;
 using System.ComponentModel.DataAnnotations;
@@ -60,10 +62,12 @@ L'attribut **Required** rend le champ obligatoire.
 
 L'attribut **Display** permet de définir le nom d'affichage.
 
-L'attribut ****
+L'attribut **DataType** permet de spécifier un type de données qui est plus spécifique que le type intrinsèque de la base de données.
+
+L'attribut **DisplayFormat** permet de spécifier explicitement le format de la date.
 
 
-# <a name=""></a>
+# <a name="">Le DBContext</a>
 
 
 ```cs
@@ -71,6 +75,14 @@ L'attribut ****
 
 ```
 
+
+# <a name=""></a>
+
+
+# <a name=""></a>
+
+
+# <a name=""></a>
 
 ```cs
 
