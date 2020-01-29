@@ -123,7 +123,18 @@ Editez le fichier appsettings.json, et ajoutez la chaine de la connexion :
 }
 ```
 
-# <a name=""></a>
+# <a name="">Installer le package Entity Framework Core pour SQLite</a>
+
+A ce stade, nous allons utiliser la console du gestionnaire de package NuGet pour installer le package **Microsoft.EntityFrameworkCore.Sqlite**.
+
+
+1. Cliquez sur le menu **Outils**, puis sur **Gestionnaire de package NuGet** et enfin sur **Console du gestionnaire de package**.
+
+ ![Ouverture projet](./media/add-package.png)
+
+ 2. Saisisez la commande **Install-Package Microsoft.EntityFrameworkCore.Sqlite** dans la console du gestionnaire de package.
+
+  ![Console NuGet](./media/nuget-console.PNG)
 
 
 # <a name=""></a>
