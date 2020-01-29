@@ -6,7 +6,7 @@
 dans le langage de programmation de votre choix sans gérer l’infrastructure. Il offre une mise à l’échelle automatique et une haute disponibilité, 
 prend en charge à la fois Windows et Linux et permet des déploiements automatisés à partir de GitHub, Azure DevOps ou n’importe quel référentiel Git.
 
-##<a name="goal"></a> Objectif
+## <a name="goal"></a> Objectif
 
 Pour cette première partie du laboratoire, les participants vont créer une application Web ASP.NET Core dans Visual Studio. Ils vont ajouter un formulaire pour collecter les commentaires
 des utilisateurs. L'application sera ensuite déployée sur Azure App Service.
