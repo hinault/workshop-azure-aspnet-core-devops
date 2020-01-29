@@ -11,6 +11,7 @@ namespace WebApp.Models
 
         [Required]
         [Display(Name = "Adresse Mail")]
+        [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         [Required]
