@@ -9,7 +9,17 @@ Pour cette deuxième partie du laboratoire, les participants vont moodifier leur 
 les outils de Visual Studio pour mettre en place des formulaires permettant la consulation, l'ajout, la modification et la suppression des données dans une banque SQLite
 en utilisant Entity Framework Core.
 
-# <a name=""></a>
+## <a name="open-web-site">Ouvrir le projet de demarrage</a>
+
+1. Ouvrez Visual Studio, puis sélectionnez **Ouvrir un projet ou une solution**.
+
+ ![Ouverture projet](./media/open-project.PNG)
+
+2. Ouvrez la solution de l'étape 2 (\Etape 2 - Ajouter Entity Framewor Core\Workshop\Workshop.sln).
+
+3. Supprimer le fichier **CommentairesController.cs** dans le dossier **Controllers**.
+
+4. Supprimer le dossier **Commentaires** dans le dossier **Views**
 
 # <a name=""></a>
 
