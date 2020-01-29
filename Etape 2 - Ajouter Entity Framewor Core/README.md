@@ -173,6 +173,9 @@ using WebApp.Data;
 
 ## Utiliser la migration pour créer et mettre à jour la base de données
 
+Nous sommes pret! Nous pouvons desormais accéder à notre base de données à partir de notre application en utilisant Entity Framework Core. Mais, nous n'avons
+pas encore créer notre base de données avec les tables correspondantes. Nous n'avoons pas besoin de le faire manuèllement. Nous pouvons utiliser 
+la fonctionnalité de migration des outils Entity Framework Core pour générer et mettre à jour base de données.
 
 ```cs
 
