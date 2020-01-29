@@ -137,12 +137,37 @@ A ce stade, nous allons utiliser la console du gestionnaire de package NuGet pou
   ![Console NuGet](./media/nuget-console.PNG)
 
 
-## Enregistrer le DBContext avec l'injection de dépendance
+## Enregistrer le DBContext avec l'injection de dépendances
+
+Pour utiliser votre classe DBContext, elle doit être enregistrée dans le conteneur d'injection de dépendances de ASP.NET Core. Pour le faire, vous devez utiliser
+la méthode d'extenssion **AddDbContext**.
+
+Ouvrez le fichier Startup.cs, et ajoutez la ligne de code suivante dans la méthode **ConfigureServices** :
 
 
+```cs
+ services.AddDbContext<WebAppContext>(options =>
+                    options.UseSqlite(Configuration.GetConnectionString("LocalConnection")));
+```
+
+Le code complet de cette méthode est le suivant :
+
+```cs
+ public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddControllersWithViews();
+
+            services.AddDbContext<WebAppContext>(options =>
+                    options.UseSqlite(Configuration.GetConnectionString("LocalConnection")));
+
+        }
+
+```
+
+```cs
 
 
-
+```
 
 ```cs
 
