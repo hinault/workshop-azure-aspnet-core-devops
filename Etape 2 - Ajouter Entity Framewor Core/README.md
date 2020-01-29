@@ -21,7 +21,7 @@ en utilisant Entity Framework Core.
 
 4. Supprimer le dossier **Commentaires** dans le dossier **Views**
 
-# <a name="validation"></a> Validation avec les DataAnnotations
+## <a name="validation"></a> Validation avec les DataAnnotations
 
 Les DataAnnotations sont utilisés pour personnaliser le modèle de données en utilisant des attributs qui spécifient des règles de mise en forme, de validation et de mappage de base de données.
 
@@ -67,7 +67,7 @@ L'attribut **DataType** permet de spécifier un type de données qui est plus spéc
 L'attribut **DisplayFormat** permet de spécifier explicitement le format de la date.
 
 
-# <a name="">Le DBContext</a>
+## <a name="">Le DBContext</a>
 
 Le **Database Context (DBContext)** est un élément important d'Entity Framework Core. C'est le pont entre votre domaine (ou vos classes d'entité) et la base de données.
 
@@ -98,7 +98,7 @@ namespace WebApp.Data
 ```
 
 
-# <a name="connectionstring">La chaine de connexion</a>
+## <a name="connectionstring">La chaine de connexion</a>
 
 La chaine de connexion (ConnectionString) founit les informations pour se connecter à la base de données, dont le nom de la base de données, le nom d'utilisateur, 
 le mot de passe ou encore le serveur de base de données.
@@ -123,7 +123,7 @@ Editez le fichier appsettings.json, et ajoutez la chaine de la connexion :
 }
 ```
 
-# <a name="">Installer le package Entity Framework Core pour SQLite</a>
+## <a name="install-efcore-sqlite">Installer le package Entity Framework Core pour SQLite</a>
 
 A ce stade, nous allons utiliser la console du gestionnaire de package NuGet pour installer le package **Microsoft.EntityFrameworkCore.Sqlite**.
 
@@ -137,7 +137,9 @@ A ce stade, nous allons utiliser la console du gestionnaire de package NuGet pou
   ![Console NuGet](./media/nuget-console.PNG)
 
 
-# <a name=""></a>
+## Enregistrer le DBContext avec l'injection de dépendance
+
+
 
 
 
@@ -146,6 +148,9 @@ A ce stade, nous allons utiliser la console du gestionnaire de package NuGet pou
 
 
 ```
+
+
+# <a name=""></a>
 
 
 ```cs
