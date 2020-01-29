@@ -40,6 +40,7 @@ namespace WebApp.Models
         public string Nom { get; set; }
 
         [Required]
+		[DataType(DataType.EmailAddress)]
         [Display(Name = "Adresse Mail")]
         public string Email { get; set; }
 
