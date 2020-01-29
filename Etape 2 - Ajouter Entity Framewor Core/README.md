@@ -201,17 +201,30 @@ Un fichier **localdb.db** sera ajouté à votre projet :
 
  3. Dans la fenêtre qui va s'afficher, selectionnez **Contrôleur MVC avec vues, utilisant Entity Framework**.
 
- ![Console NuGet](./media/mvc-controller.PNG)
+ ![Ajout contrôleur](./media/mvc-controller.PNG)
 
- 4.
+ 4. Cliquez sur **Ajouter**. La fenêtre **Ajouter Contrôleur MVC** va s'afficher. 
 
-```cs
+ 5. Dans la zone **Classe de modèle**, déroulez et selectionnez **Commentaire**.
+ 
+ 6. Dans la zone **Classe de contexte de données**, sélectionnez **WebAppContext**.
 
+  ![Ajout contrôleur](./media/mvc-controller2.PNG)
 
-```
+ 7. Cliquez ensuite sur **Ajouter**.
 
+ Le contrôleur **CommentairesController** sera créé avec les méthodes d'action pour le CRUD. Les vues correspondantes seront également créées.
+ 
+   ![Fichiers creés](./media/file-created.PNG)
 
-```cs
+## Executer le projet
 
+Appuyez sur F5 pour débogueur le projet et tester votre application.
 
-```
+## Explorer le code généré pour les opérations CRUD
+
+Explorez le code dans le fichier **Controllers/CommentairesController.cs**.
+
+Explorez le code des vues générées dans le dossier **Views/Commentaires**.
+
+## Fin
