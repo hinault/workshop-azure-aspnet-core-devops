@@ -190,6 +190,20 @@ Un fichier **localdb.db** sera ajouté à votre projet :
  ![Console NuGet](./media/db-create.PNG)
 
 
+ ##  CRUD avec Entity Framework Core 
+
+ Nous allons maintenant le générer le contrôleur, les vues et les méthodes d'action pour créer, lister, modifier et supprimer des commentaires dans la base 
+ de données en utilisant Entity Framework Core. Pour cela :
+
+ 1. Faites un clic droit sur le dossier **Controllers** dans l'explorateur de solution.
+
+ 2. Sélectionnez **Ajouter**, puis **Controller**.
+
+ 3. Dans la fenêtre qui va s'afficher, selectionnez **Contrôleur MVC avec vues, utilisant Entity Framework**.
+
+ ![Console NuGet](./media/mvc-controller.PNG)
+
+ 4.
 
 ```cs
 
