@@ -98,7 +98,12 @@ namespace WebApp.Data
 ```
 
 
-# <a name=""></a>
+# <a name="connectionstring">La chaine de connexion</a>
+
+La chaine de connexion (ConnectionString) founit les informations pour se connecter à la base de données, dont le nom de la base de données, le nom d'utilisateur, 
+le mot de passe ou encore le serveur de base de données.
+
+Dans notre, nous allons dans un premier temps utiliser une base de données locale SQLite.
 
 
 # <a name=""></a>
