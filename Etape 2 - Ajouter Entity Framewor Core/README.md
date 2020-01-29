@@ -215,7 +215,7 @@ Un fichier **localdb.db** sera ajouté à votre projet :
 
  Le contrôleur **CommentairesController** sera créé avec les méthodes d'action pour le CRUD. Les vues correspondantes seront également créées.
  
-   ![Fichiers creés](./media/file-created.PNG)
+   ![Fichiers creés](./media/files-created.PNG)
 
 ## Executer le projet
 
