@@ -183,6 +183,14 @@ Le dossier **Migrations** sera créé à la racine de votre projet  :
 
  ![Console NuGet](./media/migration.PNG)
 
+Pour créer/mettre à jour la base de données, vous devez executer la commande **Update-Database**.
+
+Un fichier **localdb.db** sera ajouté à votre projet :
+
+ ![Console NuGet](./media/db-create.PNG)
+
+
+
 ```cs
 
 
