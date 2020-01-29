@@ -69,10 +69,32 @@ L'attribut **DisplayFormat** permet de spécifier explicitement le format de la d
 
 # <a name="">Le DBContext</a>
 
+Le **Database Context (DBContext)** est un élément important d'Entity Framework Core. C'est le pont entre votre domaine (ou vos classes d'entité) et la base de données.
+
+1. Vous allez créer un nouveau dossier **Data**.
+
+2. Dans ce dossier, vous allez ajouter un nouveau fichier WebAppContext.cs.
+
+3. Remplacez le code dans ce fichier par ce qui suit :
 
 ```cs
+using Microsoft.EntityFrameworkCore;
+using WebApp.Models;
 
+namespace WebApp.Data
+{
+    public class WebAppContext : DbContext
+    {
 
+        public WebAppContext(DbContextOptions<WebAppContext> options)
+                    : base(options)
+        {
+        }
+
+        public DbSet<Commentaire> Commentaires { get; set; }
+
+    }
+}
 ```
 
 
