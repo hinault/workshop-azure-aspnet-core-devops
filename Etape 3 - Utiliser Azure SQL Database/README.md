@@ -23,7 +23,7 @@ Pour cette troisième partie du laboratoire, les participants vont créer une ba
    - **Abonnement**: Faites défiler la liste et sélectionnez l’abonnement approprié, s’il n’apparaît pas.
    - **Groupe de ressources** : sélectionnez le groupe de ressource dans lequel vous avez déployé votre application Web.
    
-     ![Nouvelle base de données SQL - Onglet des informations de base](./media/sql-database-get-started-portal/new-sql-database-basics.PNG)
+     ![Nouvelle base de données SQL - Onglet des informations de base](./media/new-sql-database-basics.PNG)
 
 5. Dans la section formulaire **Détails de la base de données**, tapez ou sélectionnez les valeurs suivantes :
 
