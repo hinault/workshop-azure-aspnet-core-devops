@@ -23,18 +23,18 @@ Pour cette troisième partie du laboratoire, les participants vont créer une ba
    - **Abonnement**: Faites défiler la liste et sélectionnez l’abonnement approprié, s’il n’apparaît pas.
    - **Groupe de ressources** : sélectionnez le groupe de ressource dans lequel vous avez déployé votre application Web.
    
-     ![Nouvelle base de données SQL - Onglet des informations de base](./media/new-sql-database-basics.PNG)
+     ![Nouvelle base de données SQL - Onglet des informations de base](./media/new-sql-database-basic.PNG)
 
 5. Dans la section formulaire **Détails de la base de données**, tapez ou sélectionnez les valeurs suivantes :
 
-   - **Nom de la base de données** : Entrez `mySampleDatabase`.
+   - **Nom de la base de données** : Entrez `cemLabDatabase`.
    - **Serveur** : sélectionnez **Créer**, entrez les valeurs suivantes, puis sélectionnez **Sélectionner**.
-       - **Nom du serveur** : tapez `mysqlserver` ainsi que des chiffres à des fins d’unicité.
-       - **Connexion administrateur au serveur** : Tapez `azureuser`.
+       - **Nom du serveur** : tapez `myazuresqlserver` ainsi que des chiffres à des fins d’unicité.
+       - **Connexion administrateur au serveur** : Tapez `cemuser`.
        - **Mot de passe** : tapez un mot de passe complexe qui répond aux exigences de mot de passe.
-       - **Emplacement** : choisissez un emplacement dans la liste déroulante, tel que `West US`.
+       - **Emplacement** : choisissez un emplacement dans la liste déroulante, tel que `Canada Centre`.
 
-         ![Nouveau serveur](../media/sql-database-get-started-portal/new-server.png)
+         ![Nouveau serveur](./media/new-server.PNG)
 
       > [!IMPORTANT]
       > Mémorisez votre nom d’utilisateur et mot de passe de connexion d’administrateur au serveur, car vous en aurez besoin pour vous connecter au serveur et aux bases de données dans le cadre de ce guide ou d’autres guides de démarrage rapide. Si vous oubliez votre mot de passe ou vos identifiants de connexion, vous pouvez obtenir le nom de connexion ou réinitialiser le mot de passe sur la page **SQL Server**. Pour ouvrir la page **SQL Server** , sélectionnez le nom du serveur sur la page **Vue d’ensemble** de la base de données une fois cette dernière créée.
