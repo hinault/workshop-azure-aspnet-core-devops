@@ -48,8 +48,9 @@ Pour cette troisième partie du laboratoire, les participants vont créer une ba
 
 11. Sur le formulaire **SQL Database**, sélectionnez **Créer** pour déployer le serveur et la base de données.
 
+## Modifier l'application pour utiliser Azure SQL Database
 
-## Ouvrir le projet de demarrage</a>
+### Ouvrir le projet de demarrage</a>
 
 1. Ouvrez Visual Studio, puis sélectionnez **Ouvrir un projet ou une solution**.
 
