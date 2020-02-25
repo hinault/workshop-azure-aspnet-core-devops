@@ -6,6 +6,21 @@
 
 Pour cette troisième partie du laboratoire, les participants vont créer une base de données Azure SQL Database en utilisant le portail Azure. Ils vont ensuite configurer leur application Web pour se connecter à la base de données et l'interroger.
 
+## Créer une base de données Azure SQL 
+
+1. Ouvrez le portail Azure (portal.azure.com).
+
+2. Cliquez sur le bouton **Créer une ressource**
+
+3. Dans la fenêtre qui va s'afficher, saisir dans la zone de recherche, saisir **SQL Database** et selectionner le service correspondant
+
+  ![Création SQL Database](./media/new-sql-db.png)
+
+4. Dans la fenêtre qui va s'afficher, cliquez sur le bouton **Créer**
+
+
+
+
 ## Ouvrir le projet de demarrage</a>
 
 1. Ouvrez Visual Studio, puis sélectionnez **Ouvrir un projet ou une solution**.
