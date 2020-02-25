@@ -13,6 +13,6 @@ en utilisant Entity Framework Core.
 
 1. Ouvrez Visual Studio, puis sélectionnez **Ouvrir un projet ou une solution**.
 
- ![Ouverture projet](./media/open-project.PNG)
+ ![Ouverture projet](./media/open-project.png)
 
 2. Ouvrez la solution de l'étape 2 (\Etape 3 - Ajouter Entity Framewor Core\Workshop\Workshop.sln).
