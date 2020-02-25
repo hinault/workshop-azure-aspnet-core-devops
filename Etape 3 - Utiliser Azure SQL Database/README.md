@@ -4,9 +4,7 @@
 
 ##  Objectif
 
-Pour cette deuxième partie du laboratoire, les participants vont moodifier leur application pour intégrer la prise en charge de Entity Framework. Ils utiliseront ensuite 
-les outils de Visual Studio pour mettre en place des formulaires permettant la consulation, l'ajout, la modification et la suppression des données dans une banque SQLite
-en utilisant Entity Framework Core.
+Pour cette troisième partie du laboratoire, les participants vont créer une base de données Azure SQL Database en utilisant le portail Azure. Ils vont ensuite configurer leur application Web pour se connecter à la base de données et l'interroger.
 
 ## Ouvrir le projet de demarrage</a>
 
@@ -14,4 +12,4 @@ en utilisant Entity Framework Core.
 
  ![Ouverture projet](./media/open-project.png)
 
-2. Ouvrez la solution de l'étape 2 (\Etape 3 - Ajouter Entity Framewor Core\Workshop\Workshop.sln).
+2. Ouvrez la solution de l'étape 3 (\Etape 3 - Utiliser Azure SQL Database\Workshop\Workshop.sln).
