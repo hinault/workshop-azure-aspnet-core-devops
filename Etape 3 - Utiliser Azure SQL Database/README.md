@@ -111,3 +111,24 @@ En environement de production, la chaine de connexion **AzureConnection** sera u
 
 ### Ajout de la variable d'environement et la chaine de connexion dans l'application Web
 
+#### Obtenir la chaine de connexion=
+
+1. Retournez dans le portail Azure. Accedez à votre groupe de ressource, puis selectionnez votre base de données Azure SQL.
+
+2. Dans le menu de gauche, dans la section **Paramètres**, sélectionnez **Chaines de connexion**.
+
+3. Copiez ensuite votre chaine de connexion dans l'onglet **ADO.NET**
+
+ ![Ouverture projet](./media/connectionstring.png)
+
+#### Ajouter les paramètres
+
+1. Accedez maintenant à l'interface de gestion de votre application.
+
+2. Dans le menu de gauche, dans la section **Paramètres**, sélectionnez **Configuration**.  L'onglet **Paramètres de l'application** va s'afficher par défaut.
+
+![Paramètres d'application](./media/app-service-parameter.png)
+
+3. Cliquez sur **Nouveau paramètre d'application**
+
+4. Dans le champ **Nom**, saisir ****
