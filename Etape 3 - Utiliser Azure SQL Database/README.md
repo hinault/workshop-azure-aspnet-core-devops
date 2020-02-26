@@ -46,7 +46,31 @@ Pour cette troisième partie du laboratoire, les participants vont créer une ba
 
 11. Passez en revue les paramètres finaux et sélectionnez **Créer**.
 
-11. Sur le formulaire **SQL Database**, sélectionnez **Créer** pour déployer le serveur et la base de données.
+12. Sur le formulaire **SQL Database**, sélectionnez **Créer** pour déployer le serveur et la base de données.
+
+##  Ajouter des règles au pare-feu
+
+Les tentatives de connexion à partir d’Internet et d’Azure doivent franchir le pare-feu avant d’atteindre votre serveur ou votre base de données SQL.
+
+Vous devez ajouter des règles au pare-feu pour permettre aux ressources Azure (votre App Service) de se connecter à la base de données Azure et à tout client (Visual Studio, par exemple) d'acceder à partir de votre adresse IP. 
+
+Pour mettre en place les règles de pare-feu :
+
+1. Accedez à votre service Azure SQL Database.
+
+2. Dans le **Vue d'ensemble**, cliquez sur **Définir le pare-feu du serveur**.
+
+ ![Ajout regle pare-feu](./media/set-firewal.png)
+
+3. Cliquez sur **ACTIVÈ** dans la zone en dessous de **Autoriser les services et les ressources Azure à accéder à ce serveur**
+
+4. Dans le champ **Nom de la règle**, donnez un nom à la règle.
+
+5. Dans les champs **Adresse IP de début** et **Adresse IP de fin**, copiez et coller la valeur de **Adresse IP du client**.
+
+6. Cliquez sur **Enregistrer**.
+
+ ![Ajout regle pare-feu](./media/add-firewal-rules.PNG)
 
 ## Modifier l'application pour utiliser Azure SQL Database
 
