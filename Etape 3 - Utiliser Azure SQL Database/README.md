@@ -57,3 +57,27 @@ Pour cette troisième partie du laboratoire, les participants vont créer une ba
  ![Ouverture projet](./media/open-project.png)
 
 2. Ouvrez la solution de l'étape 3 (\Etape 3 - Utiliser Azure SQL Database\Workshop\Workshop.sln).
+
+### Modifier les fichiers de Migration
+
+Les fichiers de migrations qui ont été générés à l'étape permettent de mettre à jour une base de données SQL Lite. Nous apporter quelques modifications afin de prendre en charge la mise à jour des données pour Azure SQL Database.
+
+Editez le fichier **Migrations/xxxx_InitialMigration.cs** et remplacez le code suivant :
+
+```cs
+ID = table.Column<int>(nullable: false)
+      .Annotation("Sqlite:Autoincrement", true),
+```
+
+Par 
+
+```cs
+ID = table.Column<int>(nullable: false)
+      .Annotation("SqlServer:Identity", "1, 1")
+      .Annotation("Sqlite:Autoincrement", true),
+```
+
+
+```cs
+
+```
