@@ -77,7 +77,37 @@ ID = table.Column<int>(nullable: false)
       .Annotation("Sqlite:Autoincrement", true),
 ```
 
+### Connexion à SQL Database en production
+
+Ouvrez le Startup.cs et recherchez le code suivant :
 
 ```cs
-
+ services.AddDbContext<WebAppContext>(options =>
+                    options.UseSqlite(Configuration.GetConnectionString("LocalConnection")));
 ```
+
+Remplacez son contenu par :
+
+```cs
+   //Utiliser SQL Database dans Azure, sinon utiliser SQLite
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
+            {
+                services.AddDbContext<WebAppContext>(options =>
+                   options.UseSqlServer(Configuration.GetConnectionString("AzureConnection")));
+
+            }
+            else
+
+                services.AddDbContext<WebAppContext>(options =>
+                      options.UseSqlite(Configuration.GetConnectionString("LocalConnection")));
+
+            //Appliquer la migration pour mettre à jour la base de données
+            services.BuildServiceProvider()
+                .GetService<WebAppContext>().Database
+                .Migrate();
+```
+
+En environement de production, la chaine de connexion **AzureConnection** sera utilisée pour se connecter à la base de données de production (Azure SQL Database). Nous devons modifier les paramètres de l'application Web Azure pour ajouter la variable d'environement (**ASPNETCORE_ENVIRONMENT**) Production et la chaine de connexion.
+
+### Ajout de la variable d'environement et la chaine de connexion dans l'application Web
+
