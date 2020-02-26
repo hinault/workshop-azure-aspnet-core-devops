@@ -131,4 +131,26 @@ En environement de production, la chaine de connexion **AzureConnection** sera u
 
 3. Cliquez sur **Nouveau paramètre d'application**
 
-4. Dans le champ **Nom**, saisir ****
+4. Dans le champ **Nom**, saisir **ASPNETCORE_ENVIRONMENT**
+
+5. Dans le chmap **Valeur**, saisir **Production** et cliquer sur **Ok**
+
+![Paramètres d'application](./media/add-parameters.PNG)
+
+6. Cliquez sur **Nouvelle chaîne de connexion**
+
+7. Dans le champ **Nom**, saisir **AzureConnection**
+
+8. Dams le champ **Valeur**, coller votre chaine de connexion. Vous devez remplacer **{your_password}** par le mot de passe de l'utilisateur de votre base de données.
+
+9. Dans le champ **Type**, déroulez et sélectionnez **SQLAzure**.
+
+10. Cliquez sur **OK**.
+
+![Paramètres d'application](./media/add-connectionstring.PNG)
+
+11. Cliquez enfin **Enregistrer**.
+
+![Paramètres d'application](./media/save-parameters.png)
+
+9 Dans 
