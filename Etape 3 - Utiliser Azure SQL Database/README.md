@@ -153,4 +153,12 @@ En environement de production, la chaine de connexion **AzureConnection** sera u
 
 ![Paramètres d'application](./media/save-parameters.png)
 
-9 Dans 
+### Déployer l'application
+
+1. Revenez dans Visual Studio et faites un clic droit sur votre projet Web. 
+
+2. Cliquez sur **Publier**.
+
+3. Dans la fenêtre de publication qui va s'afficher, validez que vous etes sur le bon profil de publication, puis cliquez sur **Publier**.
+![Publication application](./media/publish.PNG)
+
