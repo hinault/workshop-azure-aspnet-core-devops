@@ -12,6 +12,7 @@ namespace WebApp.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
+                         .Annotation("SqlServer:Identity", "1, 1")
                         .Annotation("Sqlite:Autoincrement", true),
                     Nom = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: false),

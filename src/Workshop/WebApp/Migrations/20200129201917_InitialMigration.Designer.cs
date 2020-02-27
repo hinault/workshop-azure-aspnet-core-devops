@@ -19,29 +19,26 @@ namespace WebApp.Migrations
                 .HasAnnotation("ProductVersion", "3.1.1");
 
             modelBuilder.Entity("WebApp.Models.Commentaire", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+            {
+                b.Property<int>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("INTEGER");
 
-                    b.Property<DateTime>("DateCommentaire")
-                        .HasColumnType("TEXT");
+                b.Property<DateTime>("DateCommentaire");
 
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
 
-                    b.Property<string>("Nom")
-                        .HasColumnType("TEXT");
+                b.Property<string>("Email")
+                    .IsRequired();
 
-                    b.Property<string>("Texte")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                b.Property<string>("Nom");
 
-                    b.HasKey("Id");
+                b.Property<string>("Texte")
+                    .IsRequired();
 
-                    b.ToTable("Commentaires");
-                });
+                b.HasKey("Id");
+
+                b.ToTable("Commentaires");
+            });
 #pragma warning restore 612, 618
         }
     }

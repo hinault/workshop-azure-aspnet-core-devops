@@ -27,8 +27,23 @@ namespace WebApp
         {
             services.AddControllersWithViews();
 
-            services.AddDbContext<WebAppContext>(options =>
-                    options.UseSqlite(Configuration.GetConnectionString("LocalConnection")));
+
+            //Utiliser SQL Database dans Azure, sinon utiliser SQLite
+            if (Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Production")
+            {
+                services.AddDbContext<WebAppContext>(options =>
+                   options.UseSqlServer(Configuration.GetConnectionString("AzureConnection")));
+
+            }
+            else
+
+                services.AddDbContext<WebAppContext>(options =>
+                      options.UseSqlite(Configuration.GetConnectionString("LocalConnection")));
+
+            //Appliquer la migration pour mettre à jour la base de données
+            services.BuildServiceProvider()
+                .GetService<WebAppContext>().Database
+                .Migrate();
 
         }
 
