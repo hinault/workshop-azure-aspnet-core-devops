@@ -246,3 +246,10 @@ Une fois le déploiement terminé, votre application sera affichée dans une nou
 
 Accedez à votre instance Azure SQL Database. Dans le menu de gauche, cliquez sur **Editeur de requêtes** et entrez vos paramèetres d'authentification.
 
+![Editeur de requêtes](./media/query-editor.png)
+
+Executez une requête dans l'éditeur de requêtes.
+
+![Editeur de requêtes](./media/query.PNG)
+
+## FIN
