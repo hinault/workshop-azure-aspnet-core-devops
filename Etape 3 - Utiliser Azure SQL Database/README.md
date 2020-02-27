@@ -84,7 +84,7 @@ Pour mettre en place les règles de pare-feu :
 
 ### Modifier les fichiers de Migration
 
-Les fichiers de migrations qui ont été générés à l'étape permettent de mettre à jour une base de données SQL Lite. Nous apporter quelques modifications afin de prendre en charge la mise à jour des données pour Azure SQL Database.
+Les fichiers de migrations qui ont été générés à l'étape 2 permettent de mettre à jour une base de données SQLite. Nous devons apporter quelques modifications afin de prendre en charge la mise à jour des données pour Azure SQL Database.
 
 Editez le fichier **Migrations/xxxx_InitialMigration.cs** et remplacez le code suivant :
 
@@ -99,6 +99,60 @@ Par
 ID = table.Column<int>(nullable: false)
       .Annotation("SqlServer:Identity", "1, 1")
       .Annotation("Sqlite:Autoincrement", true),
+```
+
+Editez également le fichier **Migrations/xxxx_InitialMigration.Desinger.cs**. Nous devons supprimer **.HasColumnType("TEXT")**. Cela permet de créer des colonnes de type **TEXT**, qui n'est pas reconnu par Azure SQL. Vous devez donc remplacer le code suivant :
+
+```cs
+modelBuilder.Entity("WebApp.Models.Commentaire", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DateCommentaire")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Nom")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Texte")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Commentaires");
+                });
+```
+Par
+
+```cs
+modelBuilder.Entity("WebApp.Models.Commentaire", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("DateCommentaire");
+                      
+
+                    b.Property<string>("Email")
+                        .IsRequired();
+
+                    b.Property<string>("Nom");
+
+                    b.Property<string>("Texte")
+                        .IsRequired();
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Commentaires");
+                });
 ```
 
 ### Connexion à SQL Database en production
