@@ -240,3 +240,9 @@ En environement de production, la chaine de connexion **AzureConnection** sera u
 3. Dans la fenêtre de publication qui va s'afficher, validez que vous etes sur le bon profil de publication, puis cliquez sur **Publier**.
 ![Publication application](./media/publish.PNG)
 
+Une fois le déploiement terminé, votre application sera affichée dans une nouvelle fenêtre du navigateur.
+
+## Editeur de requêtes
+
+Accedez à votre instance Azure SQL Database. Dans le menu de gauche, cliquez sur **Editeur de requêtes** et entrez vos paramèetres d'authentification.
+
