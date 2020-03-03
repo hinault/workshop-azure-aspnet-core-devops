@@ -10,5 +10,11 @@ Dans ce quatrième et dernier laboratoire, nous allons utiliser Azure DevOps pou
 
 2. **Azure Pipelines** : service Cloud permettant de générer, tester et déployer des application avec une approche CI/CD qui fonctionne avec n’importe quel langage, plateforme et cloud. 
 
+## Créer un projet Azure DevOps
+
+Allez sur **<a href="http://dev.azure.com/">dev.azure.com<>**.  Cliquez sur 
+  
+  
+![Azure DevOps](./media/azure-devops.PNG)
 
 
