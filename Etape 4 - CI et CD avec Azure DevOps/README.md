@@ -34,8 +34,25 @@ Ouvrez l'invite de commande à partir du repertoire **workshop-azure-aspnet-core
 
 > Le moyen le plus simple de le faire avec Visual Studio est d'aller sur **Team Explorer**, puis cliquer sur **Modifications**, ensuite sur **Actions** et enfin sur **Ouvrir l'invite de commandes**.
 
+Executez ensuite la commande :
 
+```
+git remote set-url origin [url-depot-azure-repos]
+```
 
+Et ensuite la commande 
+
+```
+git push -u origin --all 
+```
+
+> Une fênetre d'authentification va s'afficher. Veuillez vous authentifier avec votre compte Azure.
+
+![Azure Repos](./media/git-push.PNG)
+
+Retournez dans Azure DevOps et actualisez la page. Vous devez voir les fichiers du laboratoire dans votre dépôt :
+
+![Azure Repos](./media/azure-repos2.PNG)
 
 
 
