@@ -22,6 +22,16 @@ Une nouvelle organisation Azure sera créée pour votre compte. Vous devez ajout
 
 ![Création projet](./media/create-project.PNG)
 
+## Pousser le code dans Azure Repos
+
+Dans Azure DevOps, cliquez dans le menu à gauche sur **Repos**.
+
+Copiez le lien dans la zone **Clone to your computer**
+
+![Azure Repos](./media/azure-repos.png)
+
+
+
 
 
 
