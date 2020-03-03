@@ -12,9 +12,19 @@ Dans ce quatrième et dernier laboratoire, nous allons utiliser Azure DevOps pou
 
 ## Créer un projet Azure DevOps
 
-Allez sur **<a href="http://dev.azure.com/">dev.azure.com<>**.  Cliquez sur 
-  
+Allez sur **<a href="http://dev.azure.com/">dev.azure.com</a>**.  Cliquez sur **Démarrer gratuitement**.
   
 ![Azure DevOps](./media/azure-devops.PNG)
+
+Vous devez ensuite vous authentifier avec votre compte Microsoft Azure. Puis cliquer sur **Continuer**.
+
+Une nouvelle organisation Azure sera créée pour votre compte. Vous devez ajouter à cette dernière un nouveau projet. Il suffit juste de renseigner le nom du projet, puis cliquer sur **Create project**.
+
+![Création projet](./media/create-project.PNG)
+
+
+
+
+
 
 
