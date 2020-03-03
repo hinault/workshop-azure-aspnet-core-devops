@@ -30,6 +30,14 @@ Copiez le lien dans la zone **Clone to your computer**
 
 ![Azure Repos](./media/azure-repos.png)
 
+Ouvrez l'invite de commande à partir du repertoire **workshop-azure-aspnet-core-devops**.
+
+> Le moyen le plus simple de le faire avec Visual Studio est d'aller sur **Team Explorer**, puis cliquer sur **Modifications**, ensuite sur **Actions** et enfin sur **Ouvrir l'invite de commandes**.
+
+
+
+
+
 
 
 
