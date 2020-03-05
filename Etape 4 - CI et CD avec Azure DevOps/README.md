@@ -66,13 +66,18 @@ Pour créer votre pipeline de CI et CD, vous devez :
 
 2. Sur la page de l'application, sélectionnez **Centre de déploiement** dans le menu de gauche.
 
-3. Sélectionnez le fournisseur de contrôle de code source **Azure Repos** sur la page Centre de déploiement, puis choisissez **Continuer**.
+3. Sélectionnez le fournisseur de contrôle de code source **Azure Repos** à l'étape **Contrôle de code source**, puis cliquez sur  **Continuer**.
 
 ![Centre de déploiement](./media/deploy-center.png)
 
+4. À l'étape **Fournisseur de builds**, sélectionnez **Azure Pipelines**, puis cliquez sur **Continuer**.
 
+![Centre de déploiement](./media/deploy-center2.png)
 
+5.  gjksjgsk
 
+   * fgdfh
+   * dfhdf
 
 
 
