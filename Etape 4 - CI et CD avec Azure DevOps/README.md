@@ -86,10 +86,59 @@ Pour créer votre pipeline de CI et CD, vous devez :
 
 ![Centre de déploiement](./media/deploy-center4.png)
    
+Azure App Service va se connecter à votre projet Azure DevOps et proceder à la création du pipeline de CI et CD pour votre application avec Azure Pipelines.
 
+![Centre de déploiement](./media/deploy-center5.png)
 
+La fenêtre du gestion du Centre de déploiement va vous permettre :
 
+1. Déclencher une nouvelle mise en production avec le bouton **Synchroniser**
 
+2. Désactiver le centrer de déploiement avec le bouton **Se déconnecter**
 
+3. Visualiser et modifier le pipeline d'intégration continue avec le bouton **Modifier**
 
+![Azure Pipelines](./media/ci.PNG)
 
+4. Visualiser votre dépôt dans Azure Repos en cliquant sur le lien dans la zone **Dépôt**
+
+5. Visualiser le **Pipeline de build**
+
+6. Visualiser le **Pipeline de mise en production**
+
+7. Visualiser la **Génération déclenchée**
+
+## Modifier un fichier dans Azure Repos
+
+1. Cliquez sur le lien en  **Dépôt** dans le centre de déploiement
+
+2. Dans **Azure Repos*, cliquez sur le dossier **src/Workshop**, puis le dossier **WebApp**, ensuite le dossier **Views**, déroulez le dossier **Home** et sélectionnez le fichier **Index.cshtml**
+
+3. Cliquez sur le bouton **Edit**
+
+![Modifier Index](./media/edit-index.png)
+
+4. A la suite de la ligne de code 
+
+```html
+<h1 class="display-4">Bienvenue</h1>
+```
+
+Ajoutez 
+
+```html
+<p>Déployé avec Azure Pipelines.</p>
+```
+5. Cliquez sur **Commit**
+
+![Enregistrer](./media/commit.png)
+
+6. Puis suis **Commit** pour enregistrer
+
+Le pipeline de CI et CD sera automatiquement enclenché. Une fois la mise en proudction terminée accedez à votre application pour valider les changements.
+
+![Déploiement](./media/deploy.PNG)
+
+**Félicitations! Vous avez terminé toutes les étapes du laboratoire.**
+
+##FIN
