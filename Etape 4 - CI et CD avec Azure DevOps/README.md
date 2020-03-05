@@ -56,6 +56,20 @@ Retournez dans Azure DevOps et actualisez la page. Vous devez voir les fichiers 
 
 ## Créer le pipeline de CI et CD
 
+Nous allons utiliser le **Centre de déploiement Azure App Service** pour générer notre pipeline d'intégration et de déploiement en continu. 
+
+**Le Centre de déploiement** est une vue d’ensemble centralisée de toutes les méthodes de déploiement prises en charge par votre application. Il constitue également une expérience guidée pour la configuration de l’intégration continue et du déploiement continu.
+
+Pour créer votre pipeline de CI et CD, vous devez :
+
+1. Acceder à l'interface de gestion de votre application dans le portail Azure.
+
+2. Sur la page de l'application, sélectionnez **Centre de déploiement** dans le menu de gauche.
+
+3. Sélectionnez le fournisseur de contrôle de code source **Azure Repos** sur la page Centre de déploiement, puis choisissez **Continuer**.
+
+![Centre de déploiement](./media/deploy-center.png)
+
 
 
 
