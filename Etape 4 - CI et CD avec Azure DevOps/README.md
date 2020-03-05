@@ -74,10 +74,19 @@ Pour créer votre pipeline de CI et CD, vous devez :
 
 ![Centre de déploiement](./media/deploy-center2.png)
 
-5.  gjksjgsk
+5.  À l'étape **Configurer** :
 
-   * fgdfh
-   * dfhdf
+   * sous la section **Code**, sélectionnez l'**Organisation Azure DevOps**, le **Projet**, le **Référentiel** et la **Branche** que vous souhaitez déployer en continu.
+   * sous la section **Build**, sélectionnez **ASP.NET Core**.
+   * cliquez sur **Continuer**.
+
+![Centre de déploiement](./media/deploy-center3.png)
+
+6. Vérifiez que les informations sont correctes à l'étape **Résumé**, puis cliquez sur **Terminer**
+
+![Centre de déploiement](./media/deploy-center4.png)
+   
+
 
 
 
