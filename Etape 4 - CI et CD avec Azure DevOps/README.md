@@ -40,7 +40,7 @@ Executez ensuite la commande :
 git remote set-url origin [url-depot-azure-repos]
 ```
 
-Et ensuite la commande 
+Puis la commande :
 
 ```
 git push -u origin --all 
@@ -53,6 +53,8 @@ git push -u origin --all
 Retournez dans Azure DevOps et actualisez la page. Vous devez voir les fichiers du laboratoire dans votre dépôt :
 
 ![Azure Repos](./media/azure-repos2.PNG)
+
+## Créer le pipeline de CI et CD
 
 
 
