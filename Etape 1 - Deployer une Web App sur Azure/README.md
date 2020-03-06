@@ -24,10 +24,16 @@ Si vous avez déjà installé Visual Studio 2019 :
 
 Pour commencer, vous devez cloner le dépôt Git du lab. 
 
-Pour cela, créez un dossier LabCEM sur votre poste. Ouvrez l'invite de commande à partir de ce repertoire
+Pour cela, créez un dossier LabCEM sur votre poste. Ouvrez l'invite de commande à partir de ce repertoire. Vous pouvez le faire en saisissant simplement **cmd** dans la zone de saisie du chemin du repertoire.
 
  ![Invite de commande](./media/cmd.png)
+ 
+ Exécutez ensuite la commande suivante :
 
+```
+git clone https://github.com/hinault/workshop-azure-aspnet-core-devops.git
+```
+ 
 ## <a name="open-website"></a> Ouvrir le projet de démarrage
 
 Créez une application web ASP.NET Core en effectuant les étapes suivantes :
@@ -62,7 +68,9 @@ namespace WebApp.Models
         public string Nom { get; set; }
 
         public string Email { get; set; }
-
+        
+        public string Texte { get; set; }
+        
         public DateTime DateCommentaire { get; set; }
     }
 }
@@ -166,15 +174,13 @@ Dans **Créer un App Service**, vos options varient si vous êtes déjà connect
 
 <a herf="https://docs.microsoft.com/fr-ca/azure/azure-resource-manager/management/overview#terminology">Un groupe de ressources</a> est un conteneur logique dans lequel les ressources Azure comme les applications web, les bases de données et les comptes de stockage sont déployés et gérés. Par exemple, vous pouvez choisir de supprimer le groupe de ressources complet ultérieurement en une seule étape.
 
-4. Pour **Groupe de ressources**, sélectionnez **Nouveau**.
-
-5. Dans **Nouveau nom du groupe de ressources**, entrez *CEMLabRG*, puis sélectionnez **OK**.
+4. Sélectionnez l'abonnement et le groupe de ressources qui vous ont été attribués.
 
 <a href="https://docs.microsoft.com/fr-ca/azure/app-service/overview-hosting-plans">Un plan App Service</a> spécifie l’emplacement, la taille et les fonctionnalités de la batterie de serveurs web qui héberge votre application
 
-6. Pour le **Plan d’hébergement**, sélectionnez **Nouveau**.
+5. Pour le **Plan d’hébergement**, sélectionnez **Nouveau**.
 
-7. Dans la boîte de dialogue **Configurer le plan d’hébergement**, entrez les valeurs du tableau suivant, puis sélectionnez **OK**.
+6. Dans la boîte de dialogue **Configurer le plan d’hébergement**, entrez les valeurs du tableau suivant, puis sélectionnez **OK**.
 
    | Paramètre | Valeur suggérée | Description |
    |-|-|-|
@@ -211,7 +217,7 @@ Pour gérer l’application web, accédez au [Portail Azure](https://portal.azur
 
 ![Groupes de ressources](./media/ressource-group.png)
 
-Dans la page **Groupes de ressources**, sélectionnez le groupe de ressources **CEMLabRG**.
+Dans la page **Groupes de ressources**, sélectionnez votre groupe de ressources.
 
 Vous aurez deux ressources dans ce groupe, soit : le **Plan App Service** et **l'App Service**. 
 
