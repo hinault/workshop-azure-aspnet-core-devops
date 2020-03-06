@@ -1,43 +1,43 @@
 
-# <a name="create-an-aspnet-core-web-app-in-azure"></a>Créer et déployer une application web ASP.NET Core dans Azure Web Apps
+# <a name="create-an-aspnet-core-web-app-in-azure"></a>CrÃ©er et dÃ©ployer une application web ASP.NET Core dans Azure Web Apps
 
 
-[Azure App Service](https://docs.microsoft.com/fr-ca/azure/app-service/) vous permet de créer et d’héberger des applications web, des back-ends mobiles et des API RESTful 
-dans le langage de programmation de votre choix sans gérer l’infrastructure. Il offre une mise à l’échelle automatique et une haute disponibilité, 
-prend en charge à la fois Windows et Linux et permet des déploiements automatisés à partir de GitHub, Azure DevOps ou n’importe quel référentiel Git.
+[Azure App Service](https://docs.microsoft.com/fr-ca/azure/app-service/) vous permet de crÃ©er et dâ€™hÃ©berger des applications web, des back-ends mobiles et des API RESTful 
+dans le langage de programmation de votre choix sans gÃ©rer lâ€™infrastructure. Il offre une mise Ã  lâ€™Ã©chelle automatique et une haute disponibilitÃ©, 
+prend en charge Ã  la fois Windows et Linux et permet des dÃ©ploiements automatisÃ©s Ã  partir de GitHub, Azure DevOps ou nâ€™importe quel rÃ©fÃ©rentiel Git.
 
 ## <a name="goal"></a> Objectif
 
-Pour cette première partie du laboratoire, les participants vont créer une application Web ASP.NET Core dans Visual Studio. Ils vont ajouter un formulaire pour collecter les commentaires
-des utilisateurs. L'application sera ensuite déployée sur Azure App Service.
+Pour cette premiÃ¨re partie du laboratoire, les participants vont crÃ©er une application Web ASP.NET Core dans Visual Studio. Ils vont ajouter un formulaire pour collecter les commentaires
+des utilisateurs. L'application sera ensuite dÃ©ployÃ©e sur Azure App Service.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>PrÃ©requis
 
-Pour effectuer ce laboratoire, vous devez installer <a href="https://www.visualstudio.com/downloads/" target="_blank">Visual Studio 2019</a> avec la charge de travail **Développement web et ASP.NET**.
+Pour effectuer ce laboratoire, vous devez installer <a href="https://www.visualstudio.com/downloads/" target="_blank">Visual StudioÂ 2019</a> avec la charge de travail **DÃ©veloppement web et ASP.NET**.
 
-Si vous avez déjà installé Visual Studio 2019 :
+Si vous avez dÃ©jÃ  installÃ© Visual StudioÂ 2019Â :
 
-- Installez les dernières mises à jour dans Visual Studio en sélectionnant **Aide** > **Rechercher les mises à jour**.
-- Ajoutez la charge de travail en sélectionnant **Outils** > **Obtenir des outils et des fonctionnalités**.
+- Installez les derniÃ¨res mises Ã  jour dans Visual Studio en sÃ©lectionnant **Aide** > **Rechercher les mises Ã  jour**.
+- Ajoutez la charge de travail en sÃ©lectionnant **Outils** > **Obtenir des outils et des fonctionnalitÃ©s**.
 
-## <a name="open-website"></a> Ouvrir le projet de demarrage
+## <a name="open-website"></a> Ouvrir le projet de dÃ©marrage
 
-Créez une application web ASP.NET Core en effectuant les étapes suivantes :
+CrÃ©ez une application web ASP.NET Core en effectuant les Ã©tapes suivantesÂ :
 
-1. Ouvrez Visual Studio, puis sélectionnez **Ouvrir un projet ou une solution**.
+1. Ouvrez Visual Studio, puis sÃ©lectionnez **Ouvrir un projet ou une solution**.
 
  ![Ouverture projet](./media/open-project.PNG)
 
-2. Ouvrez la solution de l'étape 1 (\Etape 1 - Deployer une Web App sur Azure\Workshop\Workshop.sln).
+2. Ouvrez la solution de l'Ã©tape 1 (\Etape 1 - Deployer une Web App sur Azure\Workshop\Workshop.sln).
 
-3. Dans le menu Visual Studio, sélectionnez **Déboguer** > **Démarrer le débogage** pour exécuter l’application web localement.
+3. Dans le menu Visual Studio, sÃ©lectionnez **DÃ©boguer** > **DÃ©marrer le dÃ©bogage** pour exÃ©cuter lâ€™application web localement.
 
-![Exécuter l’application localement](./media/debug-locally.PNG)
+![ExÃ©cuter lâ€™application localement](./media/debug-locally.PNG)
 
 ## <a name="publish-y"></a>Modifier l'application Web
 
 
-### Le modèle
+### Le modÃ¨le
 
 Dans le dossier **Models**, ajoutez une nouvelle classe **Commentaire.cs**, avec le code suivant :
 
@@ -60,15 +60,15 @@ namespace WebApp.Models
 }
 
 ```
-### Le contrôleur
+### Le contrÃ´leur
 
-1. Faites un clic droit sur le dossier Controllers. Selectionnez **Ajouter -> Contrôleur**.
+1. Faites un clic droit sur le dossier Controllers. SÃ©lectionnez **Ajouter -> ContrÃ´leur**.
 
-2. Dans la fenêtre qui va s'afficher, selectionnez **Contrôleur MVC - Vide**.
+2. Dans la fenÃªtre qui va s'afficher, sÃ©lectionnez **ContrÃ´leur MVC - Vide**.
 
 ![Ajout controleur](./media/add-controller.PNG)
 
-3. Dans la fenêtre suivante, donnez le nom **CommentairesController**.
+3. Dans la fenÃªtre suivante, donnez le nom **CommentairesController**.
 
 4. Remplacez le code dans ce fichier par ce qui suit :
 
@@ -87,7 +87,7 @@ namespace WebApp.Controllers
             var commentaires = new List<Commentaire>()
             {
                 new Commentaire(){Id=1,Nom="Thomas", Email="thomas@test.com", Texte="Belle initiative", DateCommentaire=DateTime.Now},
-                new Commentaire(){Id=1,Nom="Daniel", Email="daniel@test.com", Texte="Intéressant pour découvrir Azure", DateCommentaire=DateTime.Now}
+                new Commentaire(){Id=1,Nom="Daniel", Email="daniel@test.com", Texte="IntÃ©ressant pour dÃ©couvrir Azure", DateCommentaire=DateTime.Now}
             };
 
             return View(commentaires);
@@ -98,29 +98,29 @@ namespace WebApp.Controllers
 
 ### La vue
 
-1. Faites un clic droit sur le nom de la méthode **Index()** du contrôleur **CommentairesController**. 
+1. Faites un clic droit sur le nom de la mÃ©thode **Index()** du contrÃ´leur **CommentairesController**. 
 
-1. Sélectionner Ajouter une Vue 
+1. SÃ©lectionner Ajouter une Vue 
 
 ![Ajout controleur](./media/scalflod-view.png)
 
-La fenêtre d'ajout de la vue va s'afficher.
+La fenÃªtre d'ajout de la vue va s'afficher.
 
-Dans le champ Modèle, déroulez et sélectionnez 'List'.
+Dans le champ ModÃ¨le, dÃ©roulez et sÃ©lectionnez 'List'.
 
-Dans le champ Classe de  modèle, déroulez et sélectionnez 'Commentaire'.
+Dans le champ Classe de  modÃ¨le, dÃ©roulez et sÃ©lectionnez 'Commentaire'.
 
 Cliquez sur ajouter.
 
 ![Ajout controleur](./media/add-view.PNG)
 
-Un fichier Index.cshtml sera ajouté dans le dossier 'Views/Commentaires'.
+Un fichier Index.cshtml sera ajoutÃ© dans le dossier 'Views/Commentaires'.
 
 ### Le layout
 
 Ouvrez le fichier /Views/Shared/_Layout.cshtml.
 
-Après les lignes de code :
+AprÃ¨s les lignes de code :
 
 ```cs
 <li class="nav-item">
@@ -136,87 +136,87 @@ Ajoutez le code suivant
                         </li>
 ```
 
-### Exécuter l'application
+### ExÃ©cuter l'application
 
-Appuyez F5 pour exécuter l'application.
+Appuyez F5 pour exÃ©cuter l'application.
 
-## <a name="publish-your-web-app"></a>Déployer sur Azure
+## <a name="publish-your-web-app"></a>DÃ©ployer sur Azure
 
-Le moyen le plus simple de déployer votre application est d'utiliser la fonction Web Deploy de Visual Studio.
+Le moyen le plus simple de dÃ©ployer votre application est d'utiliser la fonction Web Deploy de Visual Studio.
 
-1. Dans l’**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **WebApp**, puis sélectionnez **Publier**.
+1. Dans lâ€™**Explorateur de solutions**, cliquez avec le bouton droit sur le projet **WebApp**, puis sÃ©lectionnez **Publier**.
 
-2. Choisissez **App Service**, puis cliquez sur **Créer un profil**.
+2. Choisissez **App Service**, puis cliquez sur **CrÃ©er un profil**.
 
-   ![Publier à partir de la page de présentation du projet](./media/publish-app-vs2019.PNG)
+   ![Publier Ã  partir de la page de prÃ©sentation du projet](./media/publish-app-vs2019.PNG)
 
-Dans **Créer un App Service**, vos options varient si vous êtes déjà connecté à Azure et si vous avez un compte Visual Studio lié à un compte Azure. 
+Dans **CrÃ©er un App Service**, vos options varient si vous Ãªtes dÃ©jÃ  connectÃ© Ã  Azure et si vous avez un compte Visual Studio liÃ© Ã  un compte Azure. 
  
-3. Sélectionnez **Ajouter un compte** ou **Connexion** pour vous connecter à votre abonnement Azure. Si vous êtes déjà connecté, sélectionnez le compte souhaité.
+3. SÃ©lectionnez **Ajouter un compte** ou **Connexion** pour vous connecter Ã  votre abonnement Azure. Si vous Ãªtes dÃ©jÃ  connectÃ©, sÃ©lectionnez le compte souhaitÃ©.
 
-   ![Connexion à Azure](./media/sign-in-azure-vs2019.PNG)
+   ![Connexion Ã  Azure](./media/sign-in-azure-vs2019.PNG)
 
-<a herf="https://docs.microsoft.com/fr-ca/azure/azure-resource-manager/management/overview#terminology">Un groupe de ressources</a> est un conteneur logique dans lequel les ressources Azure comme les applications web, les bases de données et les comptes de stockage sont déployés et gérés. Par exemple, vous pouvez choisir de supprimer le groupe de ressources complet ultérieurement en une seule étape.
+<a herf="https://docs.microsoft.com/fr-ca/azure/azure-resource-manager/management/overview#terminology">Un groupe de ressources</a> est un conteneur logique dans lequel les ressources Azure comme les applications web, les bases de donnÃ©es et les comptes de stockage sont dÃ©ployÃ©s et gÃ©rÃ©s. Par exemple, vous pouvez choisir de supprimer le groupe de ressources complet ultÃ©rieurement en une seule Ã©tape.
 
-4. Pour **Groupe de ressources**, sélectionnez **Nouveau**.
+4. Pour **Groupe de ressources**, sÃ©lectionnez **Nouveau**.
 
-5. Dans **Nouveau nom du groupe de ressources**, entrez *CEMLabRG*, puis sélectionnez **OK**.
+5. Dans **Nouveau nom du groupe de ressources**, entrez *CEMLabRG*, puis sÃ©lectionnez **OK**.
 
-<a href="https://docs.microsoft.com/fr-ca/azure/app-service/overview-hosting-plans">Un plan App Service</a> spécifie l’emplacement, la taille et les fonctionnalités de la batterie de serveurs web qui héberge votre application
+<a href="https://docs.microsoft.com/fr-ca/azure/app-service/overview-hosting-plans">Un plan App Service</a> spÃ©cifie lâ€™emplacement, la taille et les fonctionnalitÃ©s de la batterie de serveurs web qui hÃ©berge votre application
 
-6. Pour le **Plan d’hébergement**, sélectionnez **Nouveau**.
+6. Pour le **Plan dâ€™hÃ©bergement**, sÃ©lectionnez **Nouveau**.
 
-7. Dans la boîte de dialogue **Configurer le plan d’hébergement**, entrez les valeurs du tableau suivant, puis sélectionnez **OK**.
+7. Dans la boÃ®te de dialogue **Configurer le plan dâ€™hÃ©bergement**, entrez les valeurs du tableau suivant, puis sÃ©lectionnez **OK**.
 
-   | Paramètre | Valeur suggérée | Description |
+   | ParamÃ¨tre | Valeur suggÃ©rÃ©e | Description |
    |-|-|-|
    |Plan App Service| MonPremierWebAppPlan | Nom du plan App Service. |
-   | Location | Canada East | Centre de données dans lequel l’application web est hébergée. |
-   | Size | Gratuit | Le [niveau tarifaire](https://azure.microsoft.com/pricing/details/app-service/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio) détermine les fonctionnalités d’hébergement. |
+   | Location | Canada East | Centre de donnÃ©es dans lequel lâ€™application web est hÃ©bergÃ©e. |
+   | Size | Gratuit | Le [niveau tarifaire](https://azure.microsoft.com/pricing/details/app-service/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=docs&utm_campaign=visualstudio) dÃ©termine les fonctionnalitÃ©s dâ€™hÃ©bergement. |
 
-   ![Créer un plan App Service](./media/app-service-plan-vs2019.PNG)
+   ![CrÃ©er un plan App Service](./media/app-service-plan-vs2019.PNG)
 
-8. Dans **Nom**, entrez un nom d’application unique qui inclut uniquement les caractères valides `a-z`, `A-Z`, `0-9` et `-`. Vous pouvez accepter le nom unique généré automatiquement. L’URL de l’application web est `http://<app_name>.azurewebsites.net`, où `<app_name>` est le nom de votre application.
+8. Dans **Nom**, entrez un nom dâ€™application unique qui inclut uniquement les caractÃ¨res valides `a-z`, `A-Z`, `0-9` et `-`. Vous pouvez accepter le nom unique gÃ©nÃ©rÃ© automatiquement. Lâ€™URL de lâ€™application web est `http://<app_name>.azurewebsites.net`, oÃ¹ `<app_name>` est le nom de votre application.
 
-   ![Configurer le nom de l’application](./media/web-app-name-vs2019.PNG)
+   ![Configurer le nom de lâ€™application](./media/web-app-name-vs2019.PNG)
 
-9. Sélectionnez **Créer** pour commencer à créer les ressources Azure.
+9. SÃ©lectionnez **CrÃ©er** pour commencer Ã  crÃ©er les ressources Azure.
 
-Une fois les ressources Azure créées, une page récapitulative va s'afficher.
+Une fois les ressources Azure crÃ©Ã©es, une page rÃ©capitulative va s'afficher.
 
- ![Configurer le nom de l’application](./media/publis-webapp.png)
+ ![Configurer le nom de lâ€™application](./media/publis-webapp.png)
 
-10. Dans la page récapitulative intitulée **Publier**, sélectionnez **Publier**.
+10. Dans la page rÃ©capitulative intitulÃ©e **Publier**, sÃ©lectionnez **Publier**.
 
-Une fois la publication terminée, Visual Studio lance le navigateur avec votre application en cours d'exécution.
+Une fois la publication terminÃ©e, Visual Studio lance le navigateur avec votre application en cours d'exÃ©cution.
 
-![Application web ASP.NET publiée dans Azure](./media/web-app-running-live.PNG)
+![Application web ASP.NET publiÃ©e dans Azure](./media/web-app-running-live.PNG)
 
-Le nom d’application spécifié dans la page **Créer un App Service** est utilisé en tant que préfixe d’URL au format `http://<app_name>.azurewebsites.net`.
+Le nom dâ€™application spÃ©cifiÃ© dans la page **CrÃ©er un App Service** est utilisÃ© en tant que prÃ©fixe dâ€™URL au format `http://<app_name>.azurewebsites.net`.
 
 
-**Félicitations !** Votre application web ASP.NET Core s’exécute en temps réel dans Azure App Service.
+**FÃ©licitationsÂ !** Votre application web ASP.NET Core sâ€™exÃ©cute en temps rÃ©el dans Azure App Service.
 
-## <a name="manage-the-azure-app"></a>Gérer l’application Azure
+## <a name="manage-the-azure-app"></a>GÃ©rer lâ€™application Azure
 
-Pour gérer l’application web, accédez au [Portail Azure](https://portal.azure.com), puis cliquez sur **Groupes de ressources**
+Pour gÃ©rer lâ€™application web, accÃ©dez au [Portail Azure](https://portal.azure.com), puis cliquez sur **Groupes de ressources**
 
 ![Groupes de ressources](./media/ressource-group.png)
 
-Dans la page **Groupes de ressources**, sélectionnez le groupe de ressources **CEMLabRG**.
+Dans la page **Groupes de ressources**, sÃ©lectionnez le groupe de ressources **CEMLabRG**.
 
 Vous aurez deux ressources dans ce groupe, soit : le **Plan App Service** et **l'App Service**. 
 
-Sélectionnez **L'App Service**.
+SÃ©lectionnez **L'App Service**.
 
 
-![Sélectionner App Services](./media/app-services.png)
+![SÃ©lectionner App Services](./media/app-services.png)
 
 
-Vous verrez la page Vue d’ensemble de votre application web. Ici, vous pouvez effectuer des tâches de gestion de base, par exemple parcourir, arrêter, démarrer, redémarrer et supprimer.
+Vous verrez la page Vue dâ€™ensemble de votre application web. Ici, vous pouvez effectuer des tÃ¢ches de gestion de base, par exemple parcourir, arrÃªter, dÃ©marrer, redÃ©marrer et supprimer.
 
 ![App Service dans le portail Azure](./media/web-app-general-vs2019.PNG)
 
-Le menu de gauche fournit différentes pages vous permettant de configurer votre application.
+Le menu de gauche fournit diffÃ©rentes pages vous permettant de configurer votre application.
 
 ## FIN
