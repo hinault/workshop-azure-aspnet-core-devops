@@ -12,7 +12,7 @@ Pour cette troisième partie du laboratoire, les participants vont créer une ba
 
 2. Cliquez sur le bouton **Créer une ressource**
 
-3. Dans la fenêtre qui va s'afficher, saisir dans la zone de recherche, saisir **SQL Database** et selectionner le service correspondant
+3. Dans la fenêtre qui va s'afficher, saisir dans la zone de recherche, saisir **SQL Database** et sélectionner le service correspondant
 
   ![Création SQL Database](./media/new-sql-db.png)
 
@@ -20,7 +20,7 @@ Pour cette troisième partie du laboratoire, les participants vont créer une ba
 
 5. Sous l’onglet **Bases**, dans la section **Détails du projet**, tapez ou sélectionnez les valeurs suivantes :
 
-   - **Abonnement**: Faites défiler la liste et sélectionnez l’abonnement approprié, s’il n’apparaît pas.
+   - **Abonnement**: Faites défiler la liste et sélectionnez l’abonnement approprié, s’il n’apparait pas.
    - **Groupe de ressources** : sélectionnez le groupe de ressource dans lequel vous avez déployé votre application Web.
    
      ![Nouvelle base de données SQL - Onglet des informations de base](./media/new-sql-database-basic.PNG)
@@ -52,11 +52,11 @@ Pour cette troisième partie du laboratoire, les participants vont créer une ba
 
 Les tentatives de connexion à partir d’Internet et d’Azure doivent franchir le pare-feu avant d’atteindre votre serveur ou votre base de données SQL.
 
-Vous devez ajouter des règles au pare-feu pour permettre aux ressources Azure (votre App Service) de se connecter à la base de données Azure et à tout client (Visual Studio, par exemple) d'acceder à partir de votre adresse IP. 
+Vous devez ajouter des règles au pare-feu pour permettre aux ressources Azure (votre App Service) de se connecter à la base de données Azure et à tout client (Visual Studio, par exemple) d'accéder à partir de votre adresse IP. 
 
 Pour mettre en place les règles de pare-feu :
 
-1. Accedez à votre service Azure SQL Database.
+1. Accédez à votre service Azure SQL Database.
 
 2. Dans le **Vue d'ensemble**, cliquez sur **Définir le pare-feu du serveur**.
 
@@ -66,7 +66,7 @@ Pour mettre en place les règles de pare-feu :
 
 4. Dans le champ **Nom de la règle**, donnez un nom à la règle.
 
-5. Dans les champs **Adresse IP de début** et **Adresse IP de fin**, copiez et coller la valeur de **Adresse IP du client**.
+5. Dans les champs **Adresse IP de début** et **Adresse IP de fin**, copiez et collez la valeur de **Adresse IP du client**.
 
 6. Cliquez sur **Enregistrer**.
 
@@ -74,7 +74,7 @@ Pour mettre en place les règles de pare-feu :
 
 ## Modifier l'application pour utiliser Azure SQL Database
 
-### Ouvrir le projet de demarrage</a>
+### Ouvrir le projet de démarrage</a>
 
 1. Ouvrez Visual Studio, puis sélectionnez **Ouvrir un projet ou une solution**.
 
@@ -185,13 +185,13 @@ Remplacez son contenu par :
                 .Migrate();
 ```
 
-En environement de production, la chaine de connexion **AzureConnection** sera utilisée pour se connecter à la base de données de production (Azure SQL Database). Nous devons modifier les paramètres de l'application Web Azure pour ajouter la variable d'environement (**ASPNETCORE_ENVIRONMENT**) Production et la chaine de connexion.
+En environnement de production, la chaine de connexion **AzureConnection** sera utilisée pour se connecter à la base de données de production (Azure SQL Database). Nous devons modifier les paramètres de l'application Web Azure pour ajouter la variable d'environnement (**ASPNETCORE_ENVIRONMENT**) Production et la chaine de connexion.
 
-### Ajout de la variable d'environement et la chaine de connexion dans l'application Web
+### Ajout de la variable d'environnement et la chaine de connexion dans l'application Web
 
-#### Obtenir la chaine de connexion=
+#### Obtenir la chaine de connexion
 
-1. Retournez dans le portail Azure. Accedez à votre groupe de ressource, puis selectionnez votre base de données Azure SQL.
+1. Retournez dans le portail Azure. Accédez à votre groupe de ressource, puis sélectionnez votre base de données Azure SQL.
 
 2. Dans le menu de gauche, dans la section **Paramètres**, sélectionnez **Chaines de connexion**.
 
@@ -201,7 +201,7 @@ En environement de production, la chaine de connexion **AzureConnection** sera u
 
 #### Ajouter les paramètres
 
-1. Accedez maintenant à l'interface de gestion de votre application.
+1. Accédez maintenant à l'interface de gestion de votre application.
 
 2. Dans le menu de gauche, dans la section **Paramètres**, sélectionnez **Configuration**.  L'onglet **Paramètres de l'application** va s'afficher par défaut.
 
@@ -211,7 +211,7 @@ En environement de production, la chaine de connexion **AzureConnection** sera u
 
 4. Dans le champ **Nom**, saisir **ASPNETCORE_ENVIRONMENT**
 
-5. Dans le chmap **Valeur**, saisir **Production** et cliquer sur **Ok**
+5. Dans le champ **Valeur**, saisir **Production** et cliquer sur **Ok**
 
 ![Paramètres d'application](./media/add-parameters.PNG)
 
@@ -237,18 +237,18 @@ En environement de production, la chaine de connexion **AzureConnection** sera u
 
 2. Cliquez sur **Publier**.
 
-3. Dans la fenêtre de publication qui va s'afficher, validez que vous etes sur le bon profil de publication, puis cliquez sur **Publier**.
+3. Dans la fenêtre de publication qui va s'afficher, validez que vous êtes sur le bon profil de publication, puis cliquez sur **Publier**.
 ![Publication application](./media/publish.PNG)
 
 Une fois le déploiement terminé, votre application sera affichée dans une nouvelle fenêtre du navigateur.
 
 ## Editeur de requêtes
 
-Accedez à votre instance Azure SQL Database. Dans le menu de gauche, cliquez sur **Editeur de requêtes** et entrez vos paramèetres d'authentification.
+Accédez à votre instance Azure SQL Database. Dans le menu de gauche, cliquez sur **Editeur de requêtes** et entrez vos paramètres d'authentification.
 
 ![Editeur de requêtes](./media/query-editor.png)
 
-Executez une requête dans l'éditeur de requêtes.
+Exécutez une requête dans l'éditeur de requêtes.
 
 ![Editeur de requêtes](./media/query.PNG)
 
