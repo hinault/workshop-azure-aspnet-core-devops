@@ -20,6 +20,14 @@ Si vous avez déjà installé Visual Studio 2019 :
 - Installez les dernières mises à jour dans Visual Studio en sélectionnant **Aide** > **Rechercher les mises à jour**.
 - Ajoutez la charge de travail en sélectionnant **Outils** > **Obtenir des outils et des fonctionnalités**.
 
+## Cloner le dépôt
+
+Pour commencer, vous devez cloner le dépôt Git du lab. 
+
+Pour cela, créez un dossier LabCEM sur votre poste. Ouvrez l'invite de commande à partir de ce repertoire
+
+ ![Invite de commande](./media/cmd.png)
+
 ## <a name="open-website"></a> Ouvrir le projet de démarrage
 
 Créez une application web ASP.NET Core en effectuant les étapes suivantes :
