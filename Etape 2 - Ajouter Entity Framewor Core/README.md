@@ -104,7 +104,7 @@ namespace WebApp.Data
 La chaine de connexion (ConnectionString) fournit les informations pour se connecter à la base de données, dont le nom de la base de données, le nom d'utilisateur, 
 le mot de passe ou encore le serveur de base de données.
 
-Dans notre, nous allons dans un premier temps utiliser une base de données locale SQLite. 
+Dans notre cas, nous allons dans un premier temps utiliser une base de données locale SQLite. 
 
 Editez le fichier appsettings.json, et ajoutez la chaine de la connexion :
 
@@ -167,7 +167,7 @@ Le code complet de cette méthode est le suivant :
 Vous devez ajouter ces références. Copiez et collez les lignes ci-dessus dans la section **Using** du fichier Startup.cs :
 
 ```cs
-using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
 using WebApp.Data;
 ```
 
