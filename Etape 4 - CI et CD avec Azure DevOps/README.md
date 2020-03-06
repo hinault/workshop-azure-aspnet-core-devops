@@ -4,11 +4,11 @@ Azure DevOps offre un ensemble de services de développement modernes pour la pl
 
 ##  Objectif
 
-Dans ce quatrième et dernier laboratoire, nous allons utiliser Azure DevOps pour déployer une application ASP.NET Core sur Azure App Service. Nous allons nous familliariser avec les outils services suivants d'Azure DevOps :
+Dans ce quatrième et dernier laboratoire, nous allons utiliser Azure DevOps pour déployer une application ASP.NET Core sur Azure App Service. Nous allons nous familiariser avec les outils services suivants d'Azure DevOps :
 
 1. **Azure Repos** : gestionnaire de version Git hébergé dans Cloud permettant de collaborer et créer un code de meilleure qualité avec les demandes de tirage et la gestion avancée des fichiers.
 
-2. **Azure Pipelines** : service Cloud permettant de générer, tester et déployer des application avec une approche CI/CD qui fonctionne avec n’importe quel langage, plateforme et cloud. 
+2. **Azure Pipelines** : service Cloud permettant de générer, tester et déployer des applications avec une approche CI/CD qui fonctionne avec n’importe quels langage, plateforme et cloud. 
 
 ## Créer un projet Azure DevOps
 
@@ -18,7 +18,7 @@ Allez sur **<a href="http://dev.azure.com/">dev.azure.com</a>**.  Cliquez sur **
 
 Vous devez ensuite vous authentifier avec votre compte Microsoft Azure. Puis cliquer sur **Continuer**.
 
-Une nouvelle organisation Azure sera créée pour votre compte. Vous devez ajouter à cette dernière un nouveau projet. Il suffit juste de renseigner le nom du projet, puis cliquer sur **Create project**.
+Une nouvelle organisation Azure sera créée pour votre compte. Vous devez ajouter à cette dernière un nouveau projet. Il suffit de renseigner le nom du projet, puis cliquer sur **Create project**.
 
 ![Création projet](./media/create-project.PNG)
 
@@ -30,11 +30,11 @@ Copiez le lien dans la zone **Clone to your computer**
 
 ![Azure Repos](./media/azure-repos.png)
 
-Ouvrez l'invite de commande à partir du repertoire **workshop-azure-aspnet-core-devops**.
+Ouvrez l'invite de commande à partir du répertoire **workshop-azure-aspnet-core-devops**.
 
 > Le moyen le plus simple de le faire avec Visual Studio est d'aller sur **Team Explorer**, puis cliquer sur **Modifications**, ensuite sur **Actions** et enfin sur **Ouvrir l'invite de commandes**.
 
-Executez ensuite la commande :
+Exécutez ensuite la commande :
 
 ```
 git remote set-url origin [url-depot-azure-repos]
@@ -62,7 +62,7 @@ Nous allons utiliser le **Centre de déploiement Azure App Service** pour géné
 
 Pour créer votre pipeline de CI et CD, vous devez :
 
-1. Acceder à l'interface de gestion de votre application dans le portail Azure.
+1. Accéder à l'interface de gestion de votre application dans le portail Azure.
 
 2. Sur la page de l'application, sélectionnez **Centre de déploiement** dans le menu de gauche.
 
@@ -86,11 +86,11 @@ Pour créer votre pipeline de CI et CD, vous devez :
 
 ![Centre de déploiement](./media/deploy-center4.png)
    
-Azure App Service va se connecter à votre projet Azure DevOps et proceder à la création du pipeline de CI et CD pour votre application avec Azure Pipelines.
+Azure App Service va se connecter à votre projet Azure DevOps et procéder à la création du pipeline de CI et CD pour votre application avec Azure Pipelines.
 
 ![Centre de déploiement](./media/deploy-center5.png)
 
-La fenêtre du gestion du Centre de déploiement va vous permettre :
+La fenêtre de gestion du Centre de déploiement va vous permettre :
 
 1. Déclencher une nouvelle mise en production avec le bouton **Synchroniser**
 
@@ -135,7 +135,7 @@ Ajoutez
 
 6. Puis suis **Commit** pour enregistrer
 
-Le pipeline de CI et CD sera automatiquement enclenché. Une fois la mise en proudction terminée accedez à votre application pour valider les changements.
+Le pipeline de CI et CD sera automatiquement enclenché. Une fois la mise en production terminée accédez à votre application pour valider les changements.
 
 ![Déploiement](./media/deploy.PNG)
 
