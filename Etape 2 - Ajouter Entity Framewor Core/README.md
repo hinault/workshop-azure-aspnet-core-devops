@@ -1,21 +1,21 @@
 # <a name="crud-avec-ef-core">CRUD avec Entity Framework Core</a>
 
-<a href="https://docs.microsoft.com/fr-ca/ef/core/">Entity Framework (EF) Core</a> est une version légère, extensible, open source et multiplateforme de la très connue technologie d’accès aux données Entity Framework.
-EF Core peut servir de mappeur relationnel/objet (O/RM), permettant aux développeurs .NET de travailler avec une base de données à l’aide d’objets .NET, et éliminant la nécessité de la plupart du code d’accès aux données qu’ils doivent généralement écrire. EF Core prend en charge de nombreux moteurs de base de données.
+<a href="https://docs.microsoft.com/fr-ca/ef/core/">Entity Framework (EF) Core</a> est une version lÃ©gÃ¨re, extensible, open source et multiplateforme de la trÃ¨s connue technologie dâ€™accÃ¨s aux donnÃ©es Entity Framework.
+EF Core peut servir de mappeur relationnel/objet (O/RM), permettant aux dÃ©veloppeurs .NET de travailler avec une base de donnÃ©es Ã  lâ€™aide dâ€™objets .NET, et Ã©liminant la nÃ©cessitÃ© de la plupart du code dâ€™accÃ¨s aux donnÃ©es quâ€™ils doivent gÃ©nÃ©ralement Ã©crire. EF Core prend en charge de nombreux moteurs de base de donnÃ©es.
 
 ## <a name="objectif"></a> Objectif
 
-Pour cette deuxième partie du laboratoire, les participants vont moodifier leur application pour intégrer la prise en charge de Entity Framework. Ils utiliseront ensuite 
-les outils de Visual Studio pour mettre en place des formulaires permettant la consulation, l'ajout, la modification et la suppression des données dans une banque SQLite
+Pour cette deuxiÃ¨me partie du laboratoire, les participants vont modifier leur application pour intÃ©grer la prise en charge de Entity Framework. Ils utiliseront ensuite 
+les outils de Visual Studio pour mettre en place des formulaires permettant la consultation, l'ajout, la modification et la suppression des donnÃ©es dans une banque SQLite
 en utilisant Entity Framework Core.
 
-## <a name="open-web-site">Ouvrir le projet de demarrage</a>
+## <a name="open-web-site">Ouvrir le projet de dÃ©marrage</a>
 
-1. Ouvrez Visual Studio, puis sélectionnez **Ouvrir un projet ou une solution**.
+1. Ouvrez Visual Studio, puis sÃ©lectionnez **Ouvrir un projet ou une solution**.
 
  ![Ouverture projet](./media/open-project.PNG)
 
-2. Ouvrez la solution de l'étape 2 (\Etape 2 - Ajouter Entity Framewor Core\Workshop\Workshop.sln).
+2. Ouvrez la solution de l'Ã©tape 2 (\Etape 2 - Ajouter Entity Framewor Core\Workshop\Workshop.sln).
 
 3. Supprimer le fichier **CommentairesController.cs** dans le dossier **Controllers**.
 
@@ -23,7 +23,7 @@ en utilisant Entity Framework Core.
 
 ## <a name="validation"></a> Validation avec les DataAnnotations
 
-Les DataAnnotations sont utilisés pour personnaliser le modèle de données en utilisant des attributs qui spécifient des règles de mise en forme, de validation et de mappage de base de données.
+Les DataAnnotations sont utilisÃ©s pour personnaliser le modÃ¨le de donnÃ©es en utilisant des attributs qui spÃ©cifient des rÃ¨gles de mise en forme, de validation et de mappage de base de donnÃ©es.
 
 Remplacez le contenu du fichier **Models\Commentaire.cs** par le code qui suit : 
 
@@ -61,18 +61,18 @@ namespace WebApp.Models
 
 L'attribut **Required** rend le champ obligatoire. 
 
-L'attribut **Display** permet de définir le nom d'affichage.
+L'attribut **Display** permet de dÃ©finir le nom d'affichage.
 
-L'attribut **DataType** permet de spécifier un type de données qui est plus spécifique que le type intrinsèque de la base de données.
+L'attribut **DataType** permet de spÃ©cifier un type de donnÃ©es qui est plus spÃ©cifique que le type intrinsÃ¨que de la base de donnÃ©es.
 
-L'attribut **DisplayFormat** permet de spécifier explicitement le format de la date.
+L'attribut **DisplayFormat** permet de spÃ©cifier explicitement le format de la date.
 
 
 ## <a name="">Le DBContext</a>
 
-Le **Database Context (DBContext)** est un élément important d'Entity Framework Core. C'est le pont entre votre domaine (ou vos classes d'entité) et la base de données.
+Le **Database Context (DBContext)** est un Ã©lÃ©ment important d'Entity Framework Core. C'est le pont entre votre domaine (ou vos classes d'entitÃ©) et la base de donnÃ©es.
 
-1. Vous allez créer un nouveau dossier **Data**.
+1. Vous allez crÃ©er un nouveau dossier **Data**.
 
 2. Dans ce dossier, vous allez ajouter un nouveau fichier WebAppContext.cs.
 
@@ -101,10 +101,10 @@ namespace WebApp.Data
 
 ## <a name="connectionstring">La chaine de connexion</a>
 
-La chaine de connexion (ConnectionString) founit les informations pour se connecter à la base de données, dont le nom de la base de données, le nom d'utilisateur, 
-le mot de passe ou encore le serveur de base de données.
+La chaine de connexion (ConnectionString) fournit les informations pour se connecter Ã  la base de donnÃ©es, dont le nom de la base de donnÃ©es, le nom d'utilisateur, 
+le mot de passe ou encore le serveur de base de donnÃ©es.
 
-Dans notre, nous allons dans un premier temps utiliser une base de données locale SQLite. 
+Dans notre, nous allons dans un premier temps utiliser une base de donnÃ©es locale SQLite. 
 
 Editez le fichier appsettings.json, et ajoutez la chaine de la connexion :
 
@@ -138,12 +138,12 @@ A ce stade, nous allons utiliser la console du gestionnaire de package NuGet pou
   ![Console NuGet](./media/nuget-console.PNG)
 
 
-## Enregistrer le DBContext avec l'injection de dépendances
+## Enregistrer le DBContext avec l'injection de dÃ©pendances
 
-Pour utiliser votre classe DBContext, elle doit être enregistrée dans le conteneur d'injection de dépendances de ASP.NET Core. Pour le faire, vous devez utiliser
-la méthode d'extenssion **AddDbContext**.
+Pour utiliser votre classe DBContext, elle doit Ãªtre enregistrÃ©e dans le conteneur d'injection de dÃ©pendances de ASP.NET Core. Pour le faire, vous devez utiliser
+la mÃ©thode d'extension **AddDbContext**.
 
-Ouvrez le fichier Startup.cs, et ajoutez la ligne de code suivante dans la méthode **ConfigureServices** :
+Ouvrez le fichier Startup.cs, et ajoutez la ligne de code suivante dans la mÃ©thode **ConfigureServices** :
 
 
 ```cs
@@ -151,7 +151,7 @@ Ouvrez le fichier Startup.cs, et ajoutez la ligne de code suivante dans la métho
                     options.UseSqlite(Configuration.GetConnectionString("LocalConnection")));
 ```
 
-Le code complet de cette méthode est le suivant :
+Le code complet de cette mÃ©thode est le suivant :
 
 ```cs
  public void ConfigureServices(IServiceCollection services)
@@ -164,7 +164,7 @@ Le code complet de cette méthode est le suivant :
         }
 
 ```
-Vous devez ajoutez ces références. Copiez et collez les lignes ci-dessus dans la section **Using** du fichier Startup.cs :
+Vous devez ajouter ces rÃ©fÃ©rences. Copiez et collez les lignes ci-dessus dans la section **Using** du fichier Startup.cs :
 
 ```cs
 using Microsoft.Extensions.Hosting;
@@ -172,60 +172,60 @@ using WebApp.Data;
 ```
 
 
-## Utiliser la migration pour créer et mettre à jour la base de données
+## Utiliser la migration pour crÃ©er et mettre Ã  jour la base de donnÃ©es
 
-Nous sommes pret! Nous pouvons desormais accéder à notre base de données à partir de notre application en utilisant Entity Framework Core. Mais, nous n'avons
-pas encore créer notre base de données avec les tables correspondantes. Nous n'avoons pas besoin de le faire manuèllement. Nous pouvons utiliser 
-la fonctionnalité de migration des outils Entity Framework Core pour générer et mettre à jour base de données.
+Nous sommes prÃªts! Nous pouvons dÃ©sormais accÃ©der Ã  notre base de donnÃ©es Ã  partir de notre application en utilisant Entity Framework Core. Mais, nous n'avons
+pas encore crÃ©Ã© notre base de donnÃ©es avec les tables correspondantes. Nous n'avons pas besoin de le faire manuellement. Nous pouvons utiliser 
+la fonctionnalitÃ© de migration des outils Entity Framework Core pour gÃ©nÃ©rer et mettre Ã  jour base de donnÃ©es.
 
-Accedez à la **Console du gestionnaire de package** et saisiez la commande **Add-Migration InitialMigration**.
+AccÃ©dez Ã  la **Console du gestionnaire de package** et saisissez la commande **Add-Migration InitialMigration**.
 
-Le dossier **Migrations** sera créé à la racine de votre projet  :
+Le dossier **Migrations** sera crÃ©Ã© Ã  la racine de votre projet  :
 
  ![Console NuGet](./media/migration.PNG)
 
-Pour créer/mettre à jour la base de données, vous devez executer la commande **Update-Database**.
+Pour crÃ©er/mettre Ã  jour la base de donnÃ©es, vous devez exÃ©cuter la commande **Update-Database**.
 
-Un fichier **localdb.db** sera ajouté à votre projet :
+Un fichier **localdb.db** sera ajoutÃ© Ã  votre projet :
 
  ![Console NuGet](./media/db-create.PNG)
 
 
  ##  CRUD avec Entity Framework Core 
 
- Nous allons maintenant le générer le contrôleur, les vues et les méthodes d'action pour créer, lister, modifier et supprimer des commentaires dans la base 
- de données en utilisant Entity Framework Core. Pour cela :
+ Nous allons maintenant le gÃ©nÃ©rer le contrÃ´leur, les vues et les mÃ©thodes d'action pour crÃ©er, lister, modifier et supprimer des commentaires dans la base 
+ de donnÃ©es en utilisant Entity Framework Core. Pour cela :
 
  1. Faites un clic droit sur le dossier **Controllers** dans l'explorateur de solution.
 
- 2. Sélectionnez **Ajouter**, puis **Controller**.
+ 2. SÃ©lectionnez **Ajouter**, puis **Controller**.
 
- 3. Dans la fenêtre qui va s'afficher, selectionnez **Contrôleur MVC avec vues, utilisant Entity Framework**.
+ 3. Dans la fenÃªtre qui va s'afficher, sÃ©lectionnez **ContrÃ´leur MVC avec vues, utilisant Entity Framework**.
 
- ![Ajout contrôleur](./media/mvc-controller.PNG)
+ ![Ajout contrÃ´leur](./media/mvc-controller.PNG)
 
- 4. Cliquez sur **Ajouter**. La fenêtre **Ajouter Contrôleur MVC** va s'afficher. 
+ 4. Cliquez sur **Ajouter**. La fenÃªtre **Ajouter ContrÃ´leur MVC** va s'afficher. 
 
- 5. Dans la zone **Classe de modèle**, déroulez et selectionnez **Commentaire**.
+ 5. Dans la zone **Classe de modÃ¨le**, dÃ©roulez et sÃ©lectionnez **Commentaire**.
  
- 6. Dans la zone **Classe de contexte de données**, sélectionnez **WebAppContext**.
+ 6. Dans la zone **Classe de contexte de donnÃ©es**, sÃ©lectionnez **WebAppContext**.
 
-  ![Ajout contrôleur](./media/mvc-controller2.PNG)
+  ![Ajout contrÃ´leur](./media/mvc-controller2.PNG)
 
  7. Cliquez ensuite sur **Ajouter**.
 
- Le contrôleur **CommentairesController** sera créé avec les méthodes d'action pour le CRUD. Les vues correspondantes seront également créées.
+ Le contrÃ´leur **CommentairesController** sera crÃ©Ã© avec les mÃ©thodes d'action pour le CRUD. Les vues correspondantes seront Ã©galement crÃ©Ã©es.
  
-   ![Fichiers creés](./media/files-created.PNG)
+   ![Fichiers creÃ©s](./media/files-created.PNG)
 
 ## Executer le projet
 
-Appuyez sur F5 pour débogueur le projet et tester votre application.
+Appuyez sur F5 pour dÃ©bogueur le projet et testez votre application.
 
-## Explorer le code généré pour les opérations CRUD
+## Explorer le code gÃ©nÃ©rÃ© pour les opÃ©rations CRUD
 
 Explorez le code dans le fichier **Controllers/CommentairesController.cs**.
 
-Explorez le code des vues générées dans le dossier **Views/Commentaires**.
+Explorez le code des vues gÃ©nÃ©rÃ©es dans le dossier **Views/Commentaires**.
 
 ## Fin
